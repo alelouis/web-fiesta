@@ -17,7 +17,7 @@ fiesta = Fiesta()
 @socketio.on('my event')
 def handle_my_custom_event(json):
     fiesta.connected_users += 1
-    print(state.connected_users)
+    print(fiesta.connected_users)
     print('received json: ' + str(json))
 
 # REST 
