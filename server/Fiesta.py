@@ -17,7 +17,6 @@ class Fiesta():
     def __init__(self):
         self.connections = []
         self.players = []
-        self.notebook = Notebook('haha')
 
     def add_player(self, nickname, sid):
         """ Adds new player to the game.

@@ -16,7 +16,7 @@ class Notebook():
         current round of the notebook
 
     """
-    def __init__(self, owner):
+    def __init__(self, player):
         self.player = player
         self.drawings = []
         self.words = []
