@@ -4,13 +4,12 @@ from flask_socketio import SocketIO
 import logging
 import Fiesta
 
-
 app = Flask(__name__, template_folder= '../client/templates/')
 log = logging.getLogger('werkzeug')
 log.disabled = True
 api = Api(app)
 socketio = SocketIO(app)
-print(app.root_path)
+
 fiesta = Fiesta.Fiesta()
 
 # Sockets Handling
