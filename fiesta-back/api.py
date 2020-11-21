@@ -14,21 +14,24 @@ CORS(app)
 
 fiesta = Fiesta.Fiesta()
 
-# Sockets Handling
-@socketio.on('connect')
-def handle_connection():
-    socketio.emit('players', fiesta.players)
-    fiesta.add_connection(request.sid)
+# main endpoints
 
-@socketio.on('disconnect')
-def handle_disconnection():
-    fiesta.remove_connection(request.sid)
-
-# REST 
+""" main route """
 @app.route('/')
 def index():
     return app.send_static_file('index.html')
 
+""" redirect all endpoints expect /api/ to index.html """
+@app.errorhandler(404)
+def handle_404(e):
+    if request.path.startswith('/api'):
+        return _ , 404
+    else:
+        return redirect(url_for('index'))
+
+# api
+
+""" creates a player """
 @app.route('/api/create_player', methods = ['POST'])
 def create_player():
     fiesta.add_player(
@@ -37,6 +40,7 @@ def create_player():
     socketio.emit('players', fiesta.players)
     return jsonify(nickname=request.json['nickname'], sid=request.json['sid'])
 
+""" set a player's ready status """
 @app.route('/api/set_ready', methods = ['PUT'])
 def set_ready():
     fiesta.set_ready(
@@ -48,10 +52,7 @@ def set_ready():
         socketio.emit('all_ready', {})
     return jsonify(ready=request.json['ready'], sid=request.json['sid'])
 
-@app.route('/api/start_round', methods = ['GET'])
-def start_round():
-    fiesta.start_round()
-
+""" send_word, cycle notebooks """
 @app.route('/api/send_word', methods = ['POST'])
 def send_word():
     fiesta.add_word_from_sid(
@@ -63,18 +64,12 @@ def send_word():
         fiesta.current_turn += 1
     return jsonify(ready=request.json['word'], sid=request.json['sid'])
 
+""" get last word from notebook """
 @app.route('/api/get_word', methods = ['POST'])
 def get_word():
     word = fiesta.get_last_word_from_sid(
         sid = request.json['sid'])
     return jsonify(word = word, turn = fiesta.current_turn)
-
-@app.errorhandler(404)
-def handle_404(e):
-    if request.path.startswith('/api'):
-        return _ , 404
-    else:
-        return redirect(url_for('index'))
 
 # Launch application
 if __name__ == '__main__':
