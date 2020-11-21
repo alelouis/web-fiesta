@@ -1,0 +1,23 @@
+<div *ngIf="game?.turn === 0">
+    Tour 0
+</div>
+<div *ngIf="game?.turn > 0">
+    Tour {{game?.turn}}
+</div>
+
+
+<p *ngIf="waiting">En attente des autres...</p>
+
+<mat-card *ngIf="!waiting">
+    <div>
+        Mot d'avant : {{game?.word}}
+    </div>
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label>Mot</mat-label>
+            <input matInput [(ngModel)]="word" />
+        </mat-form-field>
+    </div>
+    <button mat-raised-button [disabled]="!word" (click)="sendWord()">Envoyer&nbsp;<fa-icon icon="paper-plane">
+        </fa-icon></button>
+</mat-card>

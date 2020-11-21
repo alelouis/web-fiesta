@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+@import './css-reset.scss';
+@import './theme.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Patrick+Hand&display=swap');
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+a, a:focus, a:visited, a:hover, a:active {
+    text-decoration: none; color: inherit;
+}
+strong {
+    font-weight: 500;
+}
+
+.container {
+    padding: 20px;
+}
+.no-container {
+    margin: 0 -20px;
+}
+
+.flex-divider {
+    flex: 1 1;
+}
+
+body {
+    background: mat-color($mat-grey, 100);
+}
+
+.p {
+    margin-bottom: 12px;
+}
