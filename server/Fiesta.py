@@ -32,7 +32,7 @@ class Fiesta():
             if sid == player['sid']:
                 exists = True
         if not exists:
-            self.players.append(new_player)
+            self.players.append({'nickname':nickname, 'sid':sid})
 
     def add_connection(self, sid):
         """ Adds new connection to connections list.
