@@ -59,6 +59,7 @@ def send_word():
         sid = request.json['sid'])
     if fiesta.check_if_all_words_submitted():
         socketio.emit('all_words_submitted')
+        fiesta.cycle_notebooks()
         fiesta.current_turn += 1
     return jsonify(ready=request.json['word'], sid=request.json['sid'])
 
