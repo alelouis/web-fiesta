@@ -1,3 +1,4 @@
+import numpy as np
 
 class Notebook():
     """Notebook of Fiesta game.
@@ -14,11 +15,13 @@ class Notebook():
         current round of the notebook
 
     """
-    def __init__(self, player):
-        self.player = player
-        self.words = []
-        self.round = 0
-    
+    def __init__(self, sid):
+        # TODO : Sampling sans remise
+        characters = ['cheval', 'loutre', 'dauphin', 'chien', 'chat', 'lamasticot', 'puceron']
+        self.character = np.random.choice(characters)
+        self.sid = sid
+        self.words = [self.character]
+
     def add_word(self, word):
         """ Adds a word to the notebook and increments round.
         Attributes
@@ -26,6 +29,5 @@ class Notebook():
         word
             string of written word
         """
-        self.words.append({self.round : word})
-        self.round += 1
+        self.words.append(word)
 

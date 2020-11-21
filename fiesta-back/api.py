@@ -44,8 +44,29 @@ def set_ready():
         sid = request.json['sid'])
     socketio.emit('players', fiesta.players)
     if fiesta.check_if_all_ready():
+        fiesta.start_round()
         socketio.emit('all_ready', {})
     return jsonify(ready=request.json['ready'], sid=request.json['sid'])
+
+@app.route('/api/start_round', methods = ['GET'])
+def start_round():
+    fiesta.start_round()
+
+@app.route('/api/send_word', methods = ['POST'])
+def send_word():
+    fiesta.add_word_from_sid(
+        word = request.json['word'], 
+        sid = request.json['sid'])
+    if fiesta.check_if_all_words_submitted():
+        socketio.emit('all_words_submitted')
+        fiesta.current_turn += 1
+    return jsonify(ready=request.json['word'], sid=request.json['sid'])
+
+@app.route('/api/get_word', methods = ['POST'])
+def get_word():
+    word = fiesta.get_last_word_from_sid(
+        sid = request.json['sid'])
+    return jsonify(word = word, turn = fiest.current_turn)
 
 @app.errorhandler(404)
 def handle_404(e):
