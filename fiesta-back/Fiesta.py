@@ -16,7 +16,7 @@ class Fiesta():
     """
     def __init__(self):
         self.connections = []
-        self.players = []
+        self.players = {}
 
     def add_player(self, nickname, sid):
         """ Adds new player to the game.
@@ -28,11 +28,21 @@ class Fiesta():
             session id of the connection
         """
         exists = False
-        for player in self.players:
-            if sid == player['sid']:
+        if sid in self.players:
                 exists = True
         if not exists:
-            self.players.append({'nickname':nickname, 'sid':sid})
+            self.players[sid] = {'nickname' : nickname, 'ready' : False}
+
+    def set_ready(self, ready, sid):
+        """ Sets ready status of player.
+        Attributes
+        ----------
+        ready
+            boolean
+        sid
+            session id of the connection
+        """
+        self.players[sid]['ready'] = ready
 
     def add_connection(self, sid):
         """ Adds new connection to connections list.

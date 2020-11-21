@@ -36,6 +36,14 @@ def create_player():
     print("Players: %s" %fiesta.players)
     return jsonify(nickname=request.json['nickname'], sid=request.json['sid'])
 
+@app.route('/api/set_ready', methods = ['PUT'])
+def set_ready():
+    fiesta.set_ready(
+        ready = request.json['ready'], 
+        sid = request.json['sid'])
+    print("Players: %s" %fiesta.players)
+    return jsonify(ready=request.json['ready'], sid=request.json['sid'])
+
 @app.errorhandler(404)
 def handle_404(e):
     if request.path.startswith('/api'):
