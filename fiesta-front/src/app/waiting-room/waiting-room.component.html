@@ -1,0 +1,37 @@
+<div style="padding: 20px;" *ngIf="!socket?.ioSocket?.id">
+    Waiting
+</div>
+<div style="padding: 20px;" *ngIf="socket.ioSocket.id">
+
+    <ng-container *ngIf="!logged">
+
+        <mat-card>
+            <p>Coucou {{nickname}}</p>
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Surnom</mat-label>
+                    <input matInput [(ngModel)]="nickname" />
+                </mat-form-field>
+            </p>
+            <button mat-raised-button [disabled]="!nickname" (click)="sendMessage()">Envoyer</button>
+        </mat-card>
+    </ng-container>
+
+    <ng-container *ngIf="logged">
+        <mat-checkbox [(ngModel)]="ready" (change)="setReady()" [disabled]="this.players?.length < 2">Ready</mat-checkbox>
+    </ng-container>
+
+    <mat-list>
+        <mat-list-item *ngFor="let player of players">
+            <span>{{player.nickname}}</span>
+            <i style="flex: 1"></i>
+            <mat-chip-list>
+                <mat-chip *ngIf="player.ready" color="primary" selected>Ready</mat-chip>
+                <mat-chip *ngIf="!player.ready" color="warn" selected>Not ready</mat-chip>
+            </mat-chip-list>
+        </mat-list-item>
+    </mat-list>
+
+    <div *ngIf="allReady">LE JEU EST LANCE !!!</div>
+
+</div>

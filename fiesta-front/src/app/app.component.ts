@@ -9,11 +9,6 @@ import { Socket } from 'ngx-socket-io';
 export class AppComponent {
   title = 'fiesta-front';
 
-  constructor(private socket: Socket) {
-  }
-
-  sendMessage(){
-    this.socket.emit('new_player', {nickname: 'alexis'});
-  }
+  
   
 }
