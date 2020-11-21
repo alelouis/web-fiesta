@@ -44,6 +44,18 @@ class Fiesta():
         """
         self.players[sid]['ready'] = ready
 
+    def check_if_all_ready(self):
+        """ Checks if all players are ready
+        Returns
+        ----------
+        all_ready
+            boolean
+        """
+        all_ready = False
+        for sid in self.players:
+            all_ready |= self.players[sid]['ready']
+        return all_ready
+
     def add_connection(self, sid):
         """ Adds new connection to connections list.
         Attributes

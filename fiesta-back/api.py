@@ -43,6 +43,8 @@ def set_ready():
         ready = request.json['ready'], 
         sid = request.json['sid'])
     socketio.emit('players', fiesta.players)
+    if fiesta.check_if_all_ready():
+        socketio.emit('all_ready', {})
     return jsonify(ready=request.json['ready'], sid=request.json['sid'])
 
 @app.errorhandler(404)
