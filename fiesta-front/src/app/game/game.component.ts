@@ -45,6 +45,7 @@ export class GameComponent implements OnInit {
   sendWord() {
     this.playerService.sendWord(this.word).subscribe((response) => {
       console.log(response);
+      this.word = '';
       this.waiting = true;
       // this.getWord();
     }, (error) => {
