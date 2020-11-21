@@ -1,4 +1,4 @@
-from flask import Flask, render_template, make_response, request
+from flask import Flask, render_template, make_response, request, redirect, url_for
 from flask_restful import Resource, Api
 from flask_socketio import SocketIO
 import logging
@@ -8,7 +8,7 @@ app = Flask(__name__, template_folder= '../client/templates/')
 log = logging.getLogger('werkzeug')
 log.disabled = True
 api = Api(app)
-socketio = SocketIO(app)
+socketio = SocketIO(app, cors_allowed_origins="*")
 
 fiesta = Fiesta.Fiesta()
 
@@ -28,11 +28,17 @@ def handle_new_player(data):
     print(fiesta.players)
 
 # REST 
-class Welcome(Resource):
-    def get(self):
-        return make_response(render_template('index.html'))
 
-api.add_resource(Welcome, '/')
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.errorhandler(404)
+def handle_404(e):
+    if request.path.startswith('/api'):
+        return _ , 404
+    else:
+        return redirect(url_for('index'))
 
 # Launch application
 if __name__ == '__main__':
