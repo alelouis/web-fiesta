@@ -33,7 +33,7 @@ def create_player():
     fiesta.add_player(
         nickname = request.json['nickname'], 
         sid = request.json['sid'])
-    print("Players: %s" %fiesta.players)
+    socketio.emit('players', fiesta.players)
     return jsonify(nickname=request.json['nickname'], sid=request.json['sid'])
 
 @app.route('/api/set_ready', methods = ['PUT'])
