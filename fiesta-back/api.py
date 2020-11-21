@@ -1,4 +1,4 @@
-from flask import Flask, render_template, make_response, request, redirect, url_for
+from flask import Flask, render_template, make_response, request, redirect, url_for, jsonify
 from flask_restful import Resource, Api
 from flask_socketio import SocketIO
 from flask_cors import CORS
@@ -34,7 +34,7 @@ def create_player():
         nickname = request.json['nickname'], 
         sid = request.json['sid'])
     print("Players: %s" %fiesta.players)
-    return "OK"
+    return jsonify(nickname=request.json['nickname'], sid=request.json['sid'])
 
 @app.errorhandler(404)
 def handle_404(e):
