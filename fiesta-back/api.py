@@ -66,7 +66,7 @@ def send_word():
 def get_word():
     word = fiesta.get_last_word_from_sid(
         sid = request.json['sid'])
-    return jsonify(word = word, turn = fiest.current_turn)
+    return jsonify(word = word, turn = fiesta.current_turn)
 
 @app.errorhandler(404)
 def handle_404(e):
