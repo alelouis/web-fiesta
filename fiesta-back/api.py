@@ -41,7 +41,7 @@ def set_ready():
     fiesta.set_ready(
         ready = request.json['ready'], 
         sid = request.json['sid'])
-    socketio.send(fiesta.players)
+    socketio.emit('players', fiesta.players)
     return jsonify(ready=request.json['ready'], sid=request.json['sid'])
 
 @app.errorhandler(404)
