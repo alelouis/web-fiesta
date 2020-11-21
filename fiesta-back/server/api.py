@@ -8,7 +8,7 @@ app = Flask(__name__, template_folder= '../client/templates/')
 log = logging.getLogger('werkzeug')
 log.disabled = True
 api = Api(app)
-socketio = SocketIO(app)
+socketio = SocketIO(app, cors_allowed_origins="*")
 
 fiesta = Fiesta.Fiesta()
 
