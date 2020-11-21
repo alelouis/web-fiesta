@@ -51,9 +51,9 @@ class Fiesta():
         all_ready
             boolean
         """
-        all_ready = False
+        all_ready = True
         for sid in self.players:
-            all_ready |= self.players[sid]['ready']
+            all_ready &= self.players[sid]['ready']
         return all_ready
 
     def add_connection(self, sid):
