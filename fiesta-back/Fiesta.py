@@ -9,17 +9,23 @@ class Fiesta():
 
     Attributes
     ----------
-    connections
-        List of session ids
     players
-        List of player dictionnaries
+        List of player dictionnaries {'nickname', 'sid'}
+    notebooks
+        List of notebooks containing words and characters
+    current_turn
+        turn count
 
     """
     def __init__(self):
-        self.connections = []
         self.players = {}
         self.notebooks = []
         self.current_turn = 0
+
+    def __str__(self):
+        characters = [notebook.character for notebook in self.notebooks]
+        nicknames = [self.players[key]['nickname'] for key in self.players]
+        return f"Players:\n{nicknames}\nCharacters:\n{characters}"
 
 # misc.
 
@@ -127,6 +133,20 @@ class Fiesta():
         notebook = self.get_notebook_from_sid(sid)
         return notebook.words[-1]
 
+    def get_character(self, sid):
+        """ Gets the character of a notebook.
+        Attributes
+        ----------
+        sid
+            current player session id
+        Return
+        -------
+        self.character
+            character of the notebook
+        """
+        notebook = self.get_notebook_from_sid(sid)
+        return notebook.character
+
     def get_notebook_from_sid(self, sid):
         """ Gets a notebook from an sid.
         Attributes
@@ -169,3 +189,12 @@ class Fiesta():
             all_words_submitted &= word_submitted
         return all_words_submitted   
 
+    def check_rotation_completed(self):
+        """ Checks the notebook rotation if completed
+        Returns
+        ----------
+        rotation_completed
+            boolean
+        """
+        rotation_completed = (self.current_turn == len(self.players))
+        return rotation_completed

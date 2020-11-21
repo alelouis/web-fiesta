@@ -18,3 +18,4 @@ for sid in sids:
 for sid in sids:
     word = fiesta.get_last_word_from_sid(sid)
 
+print(str(fiesta))

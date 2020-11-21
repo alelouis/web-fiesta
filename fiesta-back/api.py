@@ -62,6 +62,9 @@ def send_word():
         socketio.emit('all_words_submitted')
         fiesta.cycle_notebooks()
         fiesta.current_turn += 1
+        if fiesta.check_rotation_completed():
+            socketio.emit('rotation_completed')
+            
     return jsonify(ready=request.json['word'], sid=request.json['sid'])
 
 """ get last word from notebook """
@@ -70,6 +73,13 @@ def get_word():
     word = fiesta.get_last_word_from_sid(
         sid = request.json['sid'])
     return jsonify(word = word, turn = fiesta.current_turn)
+
+""" get character from notebook """
+@app.route('/api/get_character', methods = ['POST'])
+def get_character():
+    word = fiesta.get_character(
+        sid = request.json['sid'])
+    return jsonify(character = character)
 
 # Launch application
 if __name__ == '__main__':

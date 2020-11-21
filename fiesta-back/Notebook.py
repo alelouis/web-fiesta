@@ -17,8 +17,9 @@ class Notebook():
     """
     def __init__(self, sid):
         # TODO : Sampling sans remise
-        characters = ['cheval', 'loutre', 'dauphin', 'chien', 'chat', 'lamasticot', 'puceron']
-        self.character = np.random.choice(characters)
+        with open('characters') as f:
+            characters_list = f.read().splitlines()
+        self.character = np.random.choice(characters_list)
         self.sid = sid
         self.words = [self.character]
 
