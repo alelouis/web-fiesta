@@ -4,7 +4,7 @@ from flask_socketio import SocketIO
 import logging
 import Fiesta
 
-app = Flask(__name__, template_folder= '../client/templates/')
+app = Flask(__name__, static_folder='static/')
 log = logging.getLogger('werkzeug')
 log.disabled = True
 api = Api(app)
@@ -31,7 +31,7 @@ def handle_new_player(data):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return app.send_static_file('index.html')
 
 @app.errorhandler(404)
 def handle_404(e):

@@ -2,6 +2,9 @@
     "folders": [
         {
             "path": "fiesta-back"
+        },
+        {
+            "path": "fiesta-front"
         }
     ]
 }
