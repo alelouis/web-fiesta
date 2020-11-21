@@ -14,13 +14,19 @@ export class WaitingRoomComponent implements OnInit {
 
   logged = false;
 
-  players: any[];
+  players: any[] = [];
   playerMap: any;
 
   allReady = false;
 
-  constructor(public socket: Socket,
-    private playerService: PlayerService) {
+  constructor(
+    public socket: Socket,
+    private playerService: PlayerService
+  ) {
+  }
+
+  otherPlayers() {
+    return this.players.filter((player) => player.id !== this.socket.ioSocket.id);
   }
 
   sendMessage() {
@@ -43,7 +49,11 @@ export class WaitingRoomComponent implements OnInit {
   ngOnInit(): void {
     this.playerService.getPlayers().subscribe((playerMap) => {
       this.playerMap = playerMap;
-      this.players = Object.values(playerMap);
+      this.players = Object.keys(playerMap).map((key) => {
+        console.log(key);
+        const value = playerMap[key];
+        return {...value, id: key}
+      });
       console.log(playerMap);
     }, (error) => {
       console.error(error);

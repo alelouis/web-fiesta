@@ -1,10 +1,12 @@
-<div style="padding: 20px;" *ngIf="!socket?.ioSocket?.id">
-    Waiting
+<div *ngIf="!socket?.ioSocket?.id">
+    Waiting for socket connection...
 </div>
-<div style="padding: 20px;" *ngIf="socket.ioSocket.id">
+
+<div *ngIf="socket.ioSocket.id">
+
+
 
     <ng-container *ngIf="!logged">
-
         <mat-card>
             <p>Coucou {{nickname}}</p>
             <p>
@@ -13,25 +15,51 @@
                     <input matInput [(ngModel)]="nickname" />
                 </mat-form-field>
             </p>
-            <button mat-raised-button [disabled]="!nickname" (click)="sendMessage()">Envoyer</button>
+            <button mat-raised-button [disabled]="!nickname" (click)="sendMessage()">Rejoindre</button>
         </mat-card>
     </ng-container>
 
-    <ng-container *ngIf="logged">
-        <mat-checkbox [(ngModel)]="ready" (change)="setReady()" [disabled]="this.players?.length < 2">Ready</mat-checkbox>
+    <ng-container *ngIf="!allReady">
+
+        <ng-container *ngIf="logged">
+
+            <div class="p">
+                <mat-slide-toggle [(ngModel)]="ready" (change)="setReady()" [disabled]="this.players?.length < 2"
+                    color="primary">
+                    Je suis prêt
+                </mat-slide-toggle>
+            </div>
+
+            <div class="no-container players">
+                <mat-list class="p">
+                    <!-- <mat-list-item *ngIf="logged">
+                        <span>{{nickname}}</span>
+                        <i style="flex: 1"></i>
+                        <mat-checkbox [(ngModel)]="ready" (change)="setReady()" [disabled]="this.players?.length < 2">Ready</mat-checkbox>
+                    </mat-list-item> -->
+                    <mat-list-item *ngFor="let player of players">
+                        <span>{{player.nickname}}</span>
+                        <i style="flex: 1"></i>
+                        <mat-chip-list>
+                            <mat-chip *ngIf="player.ready" color="primary" selected>
+                                <fa-icon icon="check"></fa-icon>&nbsp;Ready
+                            </mat-chip>
+                            <mat-chip *ngIf="!player.ready" color="warn" selected>
+                                <fa-icon icon="times"></fa-icon>&nbsp;Not ready
+                            </mat-chip>
+                        </mat-chip-list>
+                    </mat-list-item>
+                </mat-list>
+
+            </div>
+            
+        </ng-container>
+
     </ng-container>
 
-    <mat-list>
-        <mat-list-item *ngFor="let player of players">
-            <span>{{player.nickname}}</span>
-            <i style="flex: 1"></i>
-            <mat-chip-list>
-                <mat-chip *ngIf="player.ready" color="primary" selected>Ready</mat-chip>
-                <mat-chip *ngIf="!player.ready" color="warn" selected>Not ready</mat-chip>
-            </mat-chip-list>
-        </mat-list-item>
-    </mat-list>
-
-    <div *ngIf="allReady">LE JEU EST LANCE !!!</div>
+    <div *ngIf="allReady && logged">
+        <h1>LE JEU EST LANCE !!!</h1>
+        <app-game></app-game>
+    </div>
 
 </div>
