@@ -1,14 +1,16 @@
 from flask import Flask, render_template, make_response, request, redirect, url_for
 from flask_restful import Resource, Api
 from flask_socketio import SocketIO
+from flask_cors import CORS
 import logging
 import Fiesta
 
-app = Flask(__name__, static_folder='static/')
+app = Flask(__name__, static_folder='static/', static_url_path='/')
 log = logging.getLogger('werkzeug')
 log.disabled = True
 api = Api(app)
 socketio = SocketIO(app, cors_allowed_origins="*")
+CORS(app)
 
 fiesta = Fiesta.Fiesta()
 
@@ -21,17 +23,18 @@ def handle_connection():
 def handle_disconnection():
     fiesta.remove_connection(request.sid)
 
-@socketio.on('new_player')
-def handle_new_player(data):
-    print(data)
-    fiesta.add_player(nickname = data['nickname'], sid = request.sid)
-    print(fiesta.players)
-
 # REST 
-
 @app.route('/')
 def index():
     return app.send_static_file('index.html')
+
+@app.route('/api/create_player', methods = ['POST'])
+def create_player():
+    fiesta.add_player(
+        nickname = request.json['nickname'], 
+        sid = request.json['sid'])
+    print("Players: %s" %fiesta.players)
+    return "OK"
 
 @app.errorhandler(404)
 def handle_404(e):
