@@ -1,6 +1,6 @@
 from flask import Flask, render_template, make_response, request, redirect, url_for, jsonify
 from flask_restful import Resource, Api
-from flask_socketio import SocketIO
+from flask_socketio import SocketIO, emit
 from flask_cors import CORS
 import logging
 import Fiesta
@@ -41,7 +41,7 @@ def set_ready():
     fiesta.set_ready(
         ready = request.json['ready'], 
         sid = request.json['sid'])
-    print("Players: %s" %fiesta.players)
+    socketio.send(fiesta.players)
     return jsonify(ready=request.json['ready'], sid=request.json['sid'])
 
 @app.errorhandler(404)
