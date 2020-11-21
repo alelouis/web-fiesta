@@ -17,6 +17,7 @@ fiesta = Fiesta.Fiesta()
 # Sockets Handling
 @socketio.on('connect')
 def handle_connection():
+    socketio.emit('players', fiesta.players)
     fiesta.add_connection(request.sid)
 
 @socketio.on('disconnect')
