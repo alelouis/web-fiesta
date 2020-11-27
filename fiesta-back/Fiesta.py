@@ -61,6 +61,9 @@ class Fiesta():
         for sid in self.ordered_sid:
             self.notebooks.append(
                 Notebook(sid))
+    
+    def process_answers(self, sid, answers):
+        self.players[sid]['answers'] = answers
 
 # adders 
 
@@ -178,6 +181,8 @@ class Fiesta():
             characters_list = f.read().splitlines()
         characters += list(np.random.choice(characters_list, missing))
         return characters
+
+    def get_corrections
 
     def get_notebook_from_sid(self, sid):
         """ Gets a notebook from an sid.
