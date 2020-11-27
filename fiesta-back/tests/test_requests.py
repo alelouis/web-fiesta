@@ -19,21 +19,21 @@ def test_set_ready():
     assert 'sid' in r.json()
 
 def test_send_word():
-    payload = {'word': True, 'sid': 2}
+    payload = {'word': 'sapin', 'sid': 2}
     r = requests.post(url + '/api/send_word', json=payload)
     assert r.status_code == 200
     assert 'ready' in r.json()
     assert 'sid' in r.json()
 
 def test_get_word():
-    payload = {'word': True, 'sid': 2}
+    payload = {'sid': 2}
     r = requests.post(url + '/api/get_word', json=payload)
     assert r.status_code == 200
     assert 'word' in r.json()
     assert 'turn' in r.json()
 
 def test_get_character():
-    payload = {'word': True, 'sid': 2}
+    payload = {'sid': 2}
     r = requests.post(url + '/api/get_character', json=payload)
     assert r.status_code == 200
     assert 'character' in r.json()

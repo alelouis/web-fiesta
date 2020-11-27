@@ -81,6 +81,11 @@ def get_character():
         sid = request.json['sid'])
     return jsonify(character = character)
 
+""" clears game state """
+@app.route('/api/clear_game', methods = ['GET'])
+def clear_game():
+    fiesta.clear_game()
+
 # Launch application
 if __name__ == '__main__':
     socketio.run(app, debug = True)

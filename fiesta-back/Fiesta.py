@@ -27,13 +27,17 @@ class Fiesta():
         nicknames = [self.players[key]['nickname'] for key in self.players]
         return f"Players:\n{nicknames}\nCharacters:\n{characters}"
 
-# misc.
+# state
 
     def cycle_notebooks(self):
         """ Move notebooks along players."""
         for notebook in self.notebooks:
             previous_sid = self.get_previous_player_sid(notebook.sid)
             notebook.sid = previous_sid
+    
+    def clear_game(self):
+        """ Resets game state."""
+        self.__init__()
 
 # setters
 

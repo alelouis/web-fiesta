@@ -6,4 +6,5 @@ dependencies:
   - flask
   - flask-restful
   - flask-socketio
+  - requests
 prefix: /home/alelouis/miniconda3/envs/fiesta
