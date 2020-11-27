@@ -1,0 +1,33 @@
+<div class="mini-skull" *ngFor="let word of lastWords; let wordIndex = index" [class]="'color'+(wordIndex+1)"
+        [class.selected]="selectedWord === word" (click)=selectWord(word)>
+    <div class="head">{{word}}</div>
+    <div class="jaw"></div>
+</div>
+
+<div class="words-container">
+    <ng-container *ngFor="let character of characters">
+        <div class="word-card flipped" [class]="'color'+colorFor(character)"
+                [class.selected]="selectedCharacter === character" (click)=selectCharacter(character)>
+            <div>
+                {{character}}
+            </div>
+        </div>
+    </ng-container>
+</div>
+
+
+<h1 class="mat-h1">Mes réponses :</h1>
+
+<div>
+    <div *ngFor="let word of lastWords; let wordIndex = index" class="answer" [class]="'color'+(wordIndex+1)">
+        <div>{{word}}</div>
+        <i class="flex-divider"></i>
+        <div>
+            <ng-container *ngIf="this.answers[word]">
+                {{this.answers[word]}}
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+<button mat-raised-button [disabled]="!allAnswered()" (click)="sendAnswers()">Valider ces réponses</button>

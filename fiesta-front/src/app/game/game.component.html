@@ -1,63 +1,74 @@
 
-<div *ngIf="game?.turn > 0">
-    Tour {{game?.turn}}
-</div>
 
+<ng-container *ngIf="gameStage === 'SOLUTION'">
+    <p>Solution !</p>
+</ng-container>
 
-<p *ngIf="waiting">En attente des autres...</p>
+<ng-container *ngIf="gameStage === 'ASSOCIATION'">
+    <app-word-association></app-word-association>
+</ng-container>
 
-<mat-card *ngIf="!waiting">
+<ng-container *ngIf="gameStage === 'WORDS'">
+    <p *ngIf="waiting">En attente des autres...</p>
 
-    <div *ngIf="game?.turn === 0">
-        <p>Tour 0</p>
-        <div class="word-card" [class.flipped]="cardFlipped" (click)="cardFlipped = !cardFlipped">
-            <div>{{game?.word}}</div>
+    <mat-card *ngIf="!waiting">
+
+        <p *ngIf="game?.turn > 0">
+            Tour {{game?.turn}}
+        </p>
+
+        <div *ngIf="game?.turn === 0">
+            <p>Tour 0</p>
+            <div class="word-card" [class.flipped]="cardFlipped" (click)="cardFlipped = !cardFlipped">
+                <div>{{game?.word}}</div>
+            </div>
+
+            <p>Cliquez sur la zone blanche dans le crâne pour écrire un mot en lien avec ce personnage.</p>
         </div>
 
-        <p>Cliquez sur la zone blanche dans le crâne pour écrire un mot en lien avec ce personnage.</p>
-    </div>
+        <div class="no-container dark-back container">
 
-    <div class="no-container dark-back container">
-
-        <div class="skull">
-            <img class="head" height="180" width="400" />
-            <div class="jaw">
-                <div class="content">
-                    <!-- <input #wordInput *ngIf="wordErased || game.turn === 1" class="word-text"
+            <div class="skull">
+                <img class="head" height="180" width="400" />
+                <div class="jaw">
+                    <div class="content">
+                        <!-- <input #wordInput *ngIf="wordErased || game.turn === 1" class="word-text"
                         [(ngModel)]="chosenWord"> -->
-                    <span class="word-text">
-                        {{game?.word}}
-                    </span>
+                        <span class="word-text">
+                            {{game?.word}}
+                        </span>
 
-                    <div class="teeth">
-                        <div class="tooth" *ngFor="let i of [1,2,3,4]" [class.dark]="game.turn >= i"></div>
+                        <div class="teeth">
+                            <div class="tooth" *ngFor="let i of [1,2,3,4]" [class.dark]="game.turn >= i"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div>
-            <!-- <button mat-flat-button (click)="erase()" *ngIf="!(wordErased || game.turn === 1)" color="primary">
+            <div>
+                <!-- <button mat-flat-button (click)="erase()" *ngIf="!(wordErased || game.turn === 1)" color="primary">
                 Remplacer
                 &nbsp;
                 <mat-icon>clear</mat-icon></button> -->
 
-            <!-- <button mat-flat-button *ngIf="wordErased || game.turn === 1" color="primary"
+                <!-- <button mat-flat-button *ngIf="wordErased || game.turn === 1" color="primary"
                 [disabled]="!chosenWord" (click)="onChooseWord()">
                 Envoyer à {{players[playerId + 1]}}
                 &nbsp;
                 <mat-icon>send</mat-icon>
             </button> -->
+            </div>
+
         </div>
 
-    </div>
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Mot</mat-label>
+                <input matInput [(ngModel)]="word" />
+            </mat-form-field>
+        </div>
+        <button mat-raised-button [disabled]="!word" (click)="sendWord()">Envoyer&nbsp;<fa-icon icon="paper-plane">
+            </fa-icon></button>
+    </mat-card>
 
-    <div>
-        <mat-form-field appearance="outline">
-            <mat-label>Mot</mat-label>
-            <input matInput [(ngModel)]="word" />
-        </mat-form-field>
-    </div>
-    <button mat-raised-button [disabled]="!word" (click)="sendWord()">Envoyer&nbsp;<fa-icon icon="paper-plane">
-        </fa-icon></button>
-</mat-card>
+</ng-container>
