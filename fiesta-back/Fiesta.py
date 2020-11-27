@@ -182,7 +182,36 @@ class Fiesta():
         characters += list(np.random.choice(characters_list, missing))
         return characters
 
-    def get_corrections
+    def get_corrections(self, notebook):
+        """ Gets the corrections for a given notebooks.
+        Return
+        -------
+        corrections
+            dictionnary of nickname with bool correction status
+        """
+        corrections = {} 
+        last_word = notebook.words[-1]
+        for sid in self.players:
+            if self.players[sid]['answers'][last_word] == notebook.character:
+                corrections[self.players[sid]['nickname']] = True
+            else:
+                corrections[self.players[sid]['nickname']] = False
+        return corrections
+    
+    def get_notebook_from_last_word(self, last_word):
+        """ Gets a notebook from its last word.
+        Attributes
+        ----------
+        last_word
+            last word entered in the notebook
+        Return
+        -------
+        notebook
+            notebook with corresponding last word
+        """
+        for notebook in self.notebooks:
+            if notebook.words[-1] == last_word:
+                return notebook
 
     def get_notebook_from_sid(self, sid):
         """ Gets a notebook from an sid.

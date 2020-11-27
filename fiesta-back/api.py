@@ -106,8 +106,12 @@ def send_answers():
         socketio.emit('all_answers_submitted')
     return jsonify(answers = request.json['answers'], sid = request.json['sid'])
 
-#@app.route('/api/get_notebook', methods = ['POST'])
-
+""" compute correction and broadcast notebook history """
+@app.route('/api/get_notebook', methods = ['POST'])
+def get_notebook():
+    notebook = fiesta.get_notebook_from_last_word(request.json['last_word'])
+    corrections = fiesta.get_corrections(notebook)
+    socketio.broadcast('notebook', {'word_list' : notebook.words, 'corrections' : corrections})
 
 """ clears game state """
 @app.route('/api/clear_game', methods = ['GET'])
