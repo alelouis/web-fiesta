@@ -18,6 +18,8 @@ export class GameComponent implements OnInit {
   word: string;
   waiting = true;
 
+  cardFlipped = false;
+
   sendMessage() {
     
   }
