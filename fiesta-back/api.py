@@ -2,6 +2,7 @@ from flask import Flask, render_template, make_response, request, redirect, url_
 from flask_restful import Resource, Api
 from flask_socketio import SocketIO, emit
 from flask_cors import CORS
+import random
 import logging
 import Fiesta
 
@@ -49,7 +50,7 @@ def set_ready():
     socketio.emit('players', fiesta.players)
     if fiesta.check_if_all_ready():
         fiesta.start_round()
-        socketio.emit('all_ready', {})
+        socketio.emit('all_ready')
     return jsonify(ready=request.json['ready'], sid=request.json['sid'])
 
 """ send_word, cycle notebooks """
@@ -85,13 +86,28 @@ def get_character():
 @app.route('/api/get_all_characters', methods = ['GET'])
 def get_all_characters():
     characters = fiesta.get_all_characters()
+    random.shuffle(characters)
     return jsonify(characters = characters)
 
 """ get the last words of notebooks """
 @app.route('/api/get_all_last_words', methods = ['GET'])
 def get_all_last_words():
     last_words = fiesta.get_all_last_words()
+    random.shuffle(last_words)
     return jsonify(last_words = last_words)
+
+""" processing answers """
+@app.route('/api/send_answers', methods = ['POST'])
+def send_answers():
+    fiesta.process_answers(
+        sid = request.json['sid'],
+        answers = request.json['answers'])
+    if fiesta.check_if_all_answers_submitted():
+        socketio.emit('all_answers_submitted')
+    return jsonify(answers = request.json['answers'], sid = request.json['sid'])
+
+#@app.route('/api/get_notebook', methods = ['POST'])
+
 
 """ clears game state """
 @app.route('/api/clear_game', methods = ['GET'])
