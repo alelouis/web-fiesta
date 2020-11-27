@@ -1,0 +1,143 @@
+
+@import '~@angular/material/theming';
+
+.word-card {
+    position: relative;
+    z-index: 100;
+    $duration: 0.4s;
+    display: inline-block;
+    padding: 8px;
+    border-radius: 8px;
+    @include mat-elevation(2);
+    margin-bottom: 12px;
+    transition: transform $duration;
+    transition-timing-function: linear;
+    perspective-origin: bottom right;
+    transform: perspective(300px) rotateY(180deg);
+
+    > div {
+        color: transparent;
+        transition: all 0;
+        transition-delay: $duration/2;
+        border: 1.5px solid mat-color($mat-blue, 800);
+        border-radius: 2px;
+        padding: 16px 24px;
+        
+        text-transform: uppercase;
+        font-family: 'Patrick Hand', cursive;
+        font-size: 1.4em;
+
+        background: mat-color($mat-blue, 200);
+
+        cursor: pointer;
+    }
+
+    &.flipped {
+        cursor: default;
+        transform: perspective(300px) rotateY(0deg);
+        > div {
+            color: mat-color($mat-blue, 800);
+            background: white;
+        }
+    }
+}
+
+.dark-back {
+    // background-color: mat-color($mat-grey, 100);
+    text-align: center;
+}
+.skull {
+    display: inline-block;
+
+    width: 100%;
+    max-width: 290px;
+
+    $radius: 24px;
+    margin-bottom: 20px;
+
+    background-size: cover;
+    background-position: center;
+
+    animation-name: receive;
+    animation-duration: 1s;
+
+    .head {
+        border: 6px solid black;
+        border-radius: $radius;
+        overflow: hidden;
+        max-width: 100%;
+        display: block;
+        @include mat-elevation(4);
+        z-index: 10;
+        position: relative;
+        background-image: url(/assets/skull.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .jaw {
+        @include mat-elevation(4);
+        border: 6px solid black;
+        border-radius: 0 0 $radius $radius;
+        overflow: hidden;
+
+        text-align: center;
+        padding: 0 16px 20px;
+        margin: -6px 20px 0;
+        z-index: 1;
+
+        background-image: url(/assets/jaw.png);
+        background-size: 100% 100%;
+        background-position: bottom;
+        
+        .content {
+            position: relative;
+            border: 6px solid black;
+            border-radius: 0 0 16px 16px;
+            overflow: visible;
+
+            background: white;
+            margin-top: -6px;
+            padding: 18px 0 26px;
+            z-index: 5;
+        }
+        
+        span.word-text {
+            cursor: pointer;
+        }
+        .word-text {
+            max-width: 100%;
+            text-align: center;
+            border: none;
+            outline: 0;
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.8em;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 0;
+        }
+    }
+
+    .teeth {
+        $tooth-size: 24px;
+
+        height: 20px;
+        position: absolute;
+        bottom: -($tooth-size / 2);
+        display: flex;
+        justify-content: center;
+        left: 0;
+        right: 0;
+
+        .tooth {
+            height: $tooth-size;
+            width: $tooth-size;
+            border: 4px solid black;
+            background: white;
+            border-radius: 6px;
+            &.dark {
+                background-color: #34231e;
+            }
+        }
+    }
+}
