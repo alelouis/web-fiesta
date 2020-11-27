@@ -49,3 +49,24 @@ def test_get_all_last_words():
     r = requests.get(url + '/api/get_all_last_words', json=payload)
     assert r.status_code == 200
     assert 'last_words' in r.json()
+
+def test_send_answers():
+    payload = {
+        'sid': 2, 
+        'answers' : {
+            'sapin' : 'character_01'
+            }
+        }
+    r = requests.post(url + '/api/send_answers', json=payload)
+    assert r.status_code == 200
+    assert 'answers' in r.json()
+
+def test_get_correction():
+    payload = {
+        'sid': 2, 
+        'last_word' : 'sapin'
+        }
+    r = requests.post(url + '/api/get_notebook', json=payload)
+    assert r.status_code == 200
+    assert 'word_list' in r.json()
+    assert 'corrections' in r.json()

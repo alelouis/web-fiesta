@@ -255,6 +255,19 @@ class Fiesta():
             all_words_submitted &= word_submitted
         return all_words_submitted   
 
+    def check_if_all_answers_submitted(self):
+        """ Checks if all players submitted their answers
+        Returns
+        ----------
+        all_answers_submitted
+            boolean
+        """
+        all_answers_submitted = True
+        for sid in self.players:
+            answer_submitted = 'answers' in self.players[sid]
+            all_answers_submitted &= answer_submitted
+        return all_answers_submitted   
+
     def check_rotation_completed(self):
         """ Checks the notebook rotation if completed
         Returns

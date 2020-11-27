@@ -52,3 +52,12 @@ def test_get_all_characters():
 def test_get_all_last_words():
     last_words = fiesta.get_all_last_words()
     assert len(last_words) == len(fiesta.players)
+
+def test_correction():
+    notebook = fiesta.notebooks[0]
+    fiesta.process_answers('1', {notebook.words[-1] : 'character'})
+    fiesta.process_answers('2', {notebook.words[-1] : notebook.character})
+    fiesta.process_answers('3', {notebook.words[-1] : 'character'})
+    fiesta.process_answers('4', {notebook.words[-1] : notebook.character})
+    corrections = fiesta.get_corrections(fiesta.notebooks[0])
+    assert len(corrections) == len(fiesta.players)
