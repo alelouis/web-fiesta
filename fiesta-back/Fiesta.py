@@ -137,6 +137,18 @@ class Fiesta():
         notebook = self.get_notebook_from_sid(sid)
         return notebook.words[-1]
 
+    def get_all_last_words(self):
+        """ Gets all last words.
+        Return
+        -------
+        last_words
+            list of last words
+        """
+        last_words = []
+        for sid in self.players:
+            last_words.append(self.get_last_word_from_sid(sid))
+        return last_words
+
     def get_character(self, sid):
         """ Gets the character of a notebook.
         Attributes

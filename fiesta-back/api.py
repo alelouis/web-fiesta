@@ -87,6 +87,12 @@ def get_all_characters():
     characters = fiesta.get_all_characters()
     return jsonify(characters = characters)
 
+""" get the last words of notebooks """
+@app.route('/api/get_all_last_words', methods = ['GET'])
+def get_all_last_words():
+    last_words = fiesta.get_all_last_words()
+    return jsonify(last_words = last_words)
+
 """ clears game state """
 @app.route('/api/clear_game', methods = ['GET'])
 def clear_game():

@@ -47,4 +47,8 @@ def test_notebook_cycling():
 
 def test_get_all_characters():
     characters = fiesta.get_all_characters()
-    print(characters)
+    assert len(characters) == 8
+
+def test_get_all_last_words():
+    last_words = fiesta.get_all_last_words()
+    assert len(last_words) == len(fiesta.players)
