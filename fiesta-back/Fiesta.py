@@ -151,6 +151,22 @@ class Fiesta():
         notebook = self.get_notebook_from_sid(sid)
         return notebook.character
 
+    def get_all_characters(self):
+        """ Gets the 8 characters.
+        Return
+        -------
+        characters
+            list of shuffled characters
+        """
+        characters = []
+        for notebook in self.notebooks:
+            characters.append(notebook.character)
+        missing = 8 - len(characters)
+        with open('../characters', encoding="utf8") as f:
+            characters_list = f.read().splitlines()
+        characters += list(np.random.choice(characters_list, missing))
+        return characters
+
     def get_notebook_from_sid(self, sid):
         """ Gets a notebook from an sid.
         Attributes

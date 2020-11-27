@@ -1,4 +1,6 @@
 import sys
+
+from flask_cors.core import get_allow_headers
 sys.path.append('.')
 import Fiesta
 
@@ -42,3 +44,7 @@ def test_notebook_cycling():
     
     for s in range(n_sids):
         assert sids_before[s] == sids_after[(s+1)%n_sids]
+
+def test_get_all_characters():
+    characters = fiesta.get_all_characters()
+    print(characters)

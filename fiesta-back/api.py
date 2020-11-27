@@ -81,6 +81,12 @@ def get_character():
         sid = request.json['sid'])
     return jsonify(character = character)
 
+""" get the 8 characters """
+@app.route('/api/get_all_characters', methods = ['GET'])
+def get_all_characters():
+    characters = fiesta.get_all_characters()
+    return jsonify(characters = characters)
+
 """ clears game state """
 @app.route('/api/clear_game', methods = ['GET'])
 def clear_game():

@@ -4,7 +4,7 @@ import string
 
 url = 'http://0.0.0.0:5000'
 
-# Create 2 players
+# Create 3 players
 for i in range(3):
     sid = str(i)
     nickname = ''.join(random.choice(string.ascii_lowercase) for i in range(10))
