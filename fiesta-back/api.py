@@ -77,9 +77,14 @@ def get_word():
 """ get character from notebook """
 @app.route('/api/get_character', methods = ['POST'])
 def get_character():
-    word = fiesta.get_character(
+    character = fiesta.get_character(
         sid = request.json['sid'])
     return jsonify(character = character)
+
+""" clears game state """
+@app.route('/api/clear_game', methods = ['GET'])
+def clear_game():
+    fiesta.clear_game()
 
 # Launch application
 if __name__ == '__main__':
