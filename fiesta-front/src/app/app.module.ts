@@ -36,6 +36,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 
 // Add icons to the library for convenient access in other components
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { WordAssociationComponent } from './word-association/word-association.component';
  
 const config: SocketIoConfig = { url: 'http://localhost:5000', options: {} };
 
@@ -43,7 +44,8 @@ const config: SocketIoConfig = { url: 'http://localhost:5000', options: {} };
   declarations: [
     AppComponent,
     WaitingRoomComponent,
-    GameComponent
+    GameComponent,
+    WordAssociationComponent
   ],
   imports: [
     BrowserModule,

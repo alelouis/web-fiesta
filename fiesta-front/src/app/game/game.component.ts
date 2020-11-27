@@ -20,6 +20,11 @@ export class GameComponent implements OnInit {
 
   cardFlipped = false;
 
+  rotationCompleted = true;
+  allAnswersSubmitted = false;
+
+  gameStage = 'WORDS';
+
   sendMessage() {
     
   }
@@ -29,10 +34,27 @@ export class GameComponent implements OnInit {
 
     this.playerService.getAllWordsSubmitted().subscribe(() => {
       this.getWord();
+      console.log("[info] All words submitted");
+    }, (error) => {
+      console.error(error);
+    });
+
+    this.playerService.getAllAnswersSubmitted().subscribe(() => {
+      this.gameStage = 'SOLUTION';
+      console.log("[info] All words submitted");
+    }, (error) => {
+      console.error(error);
+    });
+
+    this.playerService.getRotationCompleted().subscribe(() => {
+      this.gameStage = 'ASSOCIATION';
+      console.log("[info] Rotation completed");
     }, (error) => {
       console.error(error);
     });
   }
+
+  
 
   getWord() {
     this.playerService.getWord().subscribe((response) => {

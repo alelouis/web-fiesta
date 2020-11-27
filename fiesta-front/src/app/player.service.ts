@@ -24,6 +24,12 @@ export class PlayerService {
       );
     }
 
+    sendAnswers(answers): Observable<any> {
+      return this.http.post(environment.backend + '/send_answers', 
+        {answers: answers, sid: this.socket.ioSocket.id}
+      );
+    }
+
   createPlayer(nickname): Observable<any> {
     return this.http.post(environment.backend + '/create_player', 
       {nickname: nickname, sid: this.socket.ioSocket.id}
@@ -36,6 +42,14 @@ export class PlayerService {
     );
   }
 
+  getAllCharacters(): Observable<any> {
+    return this.http.get(environment.backend + '/get_all_characters');
+  }
+
+  getAllLastWords(): Observable<any> {
+    return this.http.get(environment.backend + '/get_all_last_words');
+  }
+
   getPlayers(): Observable<any> {
     return this.socket.fromEvent('players');
   }
@@ -46,6 +60,14 @@ export class PlayerService {
 
   getAllWordsSubmitted(): Observable<any> {
     return this.socket.fromEvent('all_words_submitted');
+  }
+  
+  getAllAnswersSubmitted(): Observable<any> {
+    return this.socket.fromEvent('all_answers_submitted');
+  }
+
+  getRotationCompleted(): Observable<any> {
+    return this.socket.fromEvent('rotation_completed');
   }
 
 }
