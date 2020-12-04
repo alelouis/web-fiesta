@@ -279,5 +279,5 @@ class Fiesta():
         rotation_completed
             boolean
         """
-        rotation_completed = (self.current_turn == 3)
+        rotation_completed = (self.current_turn == 4)
         return rotation_completed
