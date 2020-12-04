@@ -5,6 +5,7 @@ dependencies:
   - python=3.7
   - flask
   - flask-cors
+  - flask-socketio
   - requests
   - numpy
 prefix: /home/alelouis/miniconda3/envs/fiesta
