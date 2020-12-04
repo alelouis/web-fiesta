@@ -45,8 +45,7 @@ def test_get_all_characters():
     assert 'characters' in r.json()
 
 def test_get_all_last_words():
-    payload = {'sid': 2}
-    r = requests.get(url + '/api/get_all_last_words', json=payload)
+    r = requests.get(url + '/api/get_all_last_words')
     assert r.status_code == 200
     assert 'last_words' in r.json()
 
