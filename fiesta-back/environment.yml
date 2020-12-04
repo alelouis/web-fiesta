@@ -4,7 +4,7 @@ channels:
 dependencies:
   - python=3.7
   - flask
-  - flask-restful
-  - flask-socketio
+  - flask-cors
   - requests
+  - numpy
 prefix: /home/alelouis/miniconda3/envs/fiesta
