@@ -21,6 +21,7 @@ class Fiesta():
         self.players = {}
         self.notebooks = []
         self.current_turn = 0
+        self.sampled_characters = []
 
     def __str__(self):
         characters = [notebook.character for notebook in self.notebooks]
@@ -37,7 +38,9 @@ class Fiesta():
     
     def clear_game(self):
         """ Resets game state."""
-        self.__init__()
+        self.notebooks = []
+        self.current_turn = 0
+
 
 # setters
 
@@ -58,12 +61,11 @@ class Fiesta():
         order = np.arange(len(self.players))
         np.random.shuffle(order)
         self.ordered_sid = np.array(list(self.players.keys()))[order]
-        sampled_characters = []
         for sid in self.ordered_sid:
             new_notebook = Notebook(sid)
-            while new_notebook.character in sampled_characters:
+            while new_notebook.character in self.sampled_characters:
                 new_notebook = Notebook(sid)
-            sampled_characters.append(new_notebook.character)
+            self.sampled_characters.append(new_notebook.character)
             self.notebooks.append(new_notebook)
     
     def process_answers(self, sid, answers):
