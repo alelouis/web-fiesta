@@ -17,7 +17,7 @@ class Notebook():
     """
     def __init__(self, sid):
         # TODO : Sampling sans remise
-        with open('../characters', encoding="utf8") as f:
+        with open('characters', encoding="utf8") as f:
             characters_list = f.read().splitlines()
         self.character = np.random.choice(characters_list)
         self.sid = sid
