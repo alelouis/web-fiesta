@@ -186,7 +186,7 @@ class Fiesta():
         for notebook in self.notebooks:
             characters.append(notebook.character)
         missing = 8 - len(characters)
-        with open('../characters', encoding="utf8") as f:
+        with open('characters', encoding="utf8") as f:
             characters_list = f.read().splitlines()
         characters += list(np.random.choice(characters_list, missing))
         return characters
