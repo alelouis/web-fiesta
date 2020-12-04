@@ -118,6 +118,7 @@ def get_notebook():
 @app.route('/api/clear_game', methods = ['GET'])
 def clear_game():
     fiesta.clear_game()
+    socketio.emit('clear_game')
 
 # Launch application
 if __name__ == '__main__':
