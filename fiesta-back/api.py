@@ -1,5 +1,4 @@
 from flask import Flask, render_template, make_response, request, redirect, url_for, jsonify
-from flask_restful import Resource, Api
 from flask_socketio import SocketIO, emit
 from flask_cors import CORS
 import random
@@ -9,7 +8,6 @@ import Fiesta
 app = Flask(__name__, static_folder='static/', static_url_path='/')
 log = logging.getLogger('werkzeug')
 log.disabled = True
-api = Api(app)
 socketio = SocketIO(app, cors_allowed_origins="*")
 CORS(app)
 
