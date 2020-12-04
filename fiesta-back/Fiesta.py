@@ -58,9 +58,13 @@ class Fiesta():
         order = np.arange(len(self.players))
         np.random.shuffle(order)
         self.ordered_sid = np.array(list(self.players.keys()))[order]
+        sampled_characters = []
         for sid in self.ordered_sid:
-            self.notebooks.append(
-                Notebook(sid))
+            new_notebook = Notebook(sid)
+            while new_notebook.character in sampled_characters:
+                new_notebook = Notebook(sid)
+            sampled_characters.append(new_notebook.character)
+            self.notebooks.append(new_notebook)
     
     def process_answers(self, sid, answers):
         self.players[sid]['answers'] = answers
