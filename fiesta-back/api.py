@@ -119,6 +119,7 @@ def get_notebook():
 def clear_game():
     fiesta.clear_game()
     socketio.emit('clear_game')
+    socketio.emit('players', fiesta.players)
     return jsonify(cleared = True)
 
 # Launch application

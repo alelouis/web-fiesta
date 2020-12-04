@@ -40,6 +40,9 @@ class Fiesta():
         """ Resets game state."""
         self.notebooks = []
         self.current_turn = 0
+        for sid in self.players:
+            self.players[sid]['ready'] = False
+            del self.players[sid]['answers']
 
 
 # setters
