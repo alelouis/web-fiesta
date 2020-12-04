@@ -42,12 +42,22 @@ export class PlayerService {
     );
   }
 
+  getNotebook(lastWord: string): Observable<any> {
+    return this.http.post(environment.backend + '/get_notebook', 
+      {last_word: lastWord}
+    );
+  }
+
   getAllCharacters(): Observable<any> {
     return this.http.get(environment.backend + '/get_all_characters');
   }
 
   getAllLastWords(): Observable<any> {
     return this.http.get(environment.backend + '/get_all_last_words');
+  }
+
+  clearGame(): Observable<any> {
+    return this.http.get(environment.backend + '/clear_game');
   }
 
   getPlayers(): Observable<any> {
@@ -68,6 +78,14 @@ export class PlayerService {
 
   getRotationCompleted(): Observable<any> {
     return this.socket.fromEvent('rotation_completed');
+  }
+
+  getNotebookEvent(): Observable<any> {
+    return this.socket.fromEvent('notebook');
+  }
+
+  getGameCleared(): Observable<any> {
+    return this.socket.fromEvent('clear_game');
   }
 
 }

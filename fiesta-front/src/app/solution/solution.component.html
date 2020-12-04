@@ -1,0 +1,36 @@
+
+<ng-container *ngFor="let lastWord of lastWords; let wordIndex = index">
+
+
+    <div class="mini-skull"  (click)=selectWord(lastWord)>
+        <div class="head">{{lastWord}}</div>
+        <div class="jaw"></div>
+    </div>
+
+    <div *ngIf="currentNotebook?.lastWord === lastWord">
+        <div style="display: flex;">
+            <ng-container *ngFor="let word of currentNotebook.word_list; let wordIndex = index">
+                <ng-container *ngIf="wordIndex === 0">
+                    <span>{{word}}</span>
+                </ng-container>
+                <ng-container *ngIf="wordIndex !== 0">
+                    <span><fa-icon icon="long-arrow-alt-right"></fa-icon></span>
+                    <span>{{word}}</span>
+                </ng-container>
+            </ng-container>
+        </div>
+
+        <div>
+            <div *ngFor="let player of getCorrections()">
+                {{player.name}} - {{player.correct}}
+            </div>
+        </div>
+    </div>
+
+</ng-container>
+
+<div>
+    <button mat-raised-button (click)="clearGame()">
+        Nouvelle manche
+    </button>
+</div>

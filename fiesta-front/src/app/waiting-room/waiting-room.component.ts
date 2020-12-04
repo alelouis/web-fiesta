@@ -64,6 +64,14 @@ export class WaitingRoomComponent implements OnInit {
     }, (error) => {
       console.error(error);
     });
+
+    this.playerService.getGameCleared().subscribe(() => {
+      this.ready = false;
+      this.allReady = false;
+      console.log("[info] Game reinitialized");
+    }, (error) => {
+      console.error(error);
+    });
   }
 
 }

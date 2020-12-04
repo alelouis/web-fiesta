@@ -41,7 +41,7 @@ export class GameComponent implements OnInit {
 
     this.playerService.getAllAnswersSubmitted().subscribe(() => {
       this.gameStage = 'SOLUTION';
-      console.log("[info] All words submitted");
+      console.log("[info] All answers submitted");
     }, (error) => {
       console.error(error);
     });

@@ -37,15 +37,18 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 // Add icons to the library for convenient access in other components
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { WordAssociationComponent } from './word-association/word-association.component';
+import { SolutionComponent } from './solution/solution.component';
+import { environment } from 'src/environments/environment';
  
-const config: SocketIoConfig = { url: 'http://localhost:5000', options: {} };
+const config: SocketIoConfig = { url: environment.websocket, options: {} };
 
 @NgModule({
   declarations: [
     AppComponent,
     WaitingRoomComponent,
     GameComponent,
-    WordAssociationComponent
+    WordAssociationComponent,
+    SolutionComponent
   ],
   imports: [
     BrowserModule,
