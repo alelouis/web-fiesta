@@ -34,9 +34,8 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build and tag docker image
-        run: docker build -t alelouis/alelouis-dev:init .
-
-      - name: Push docker image
-        run: docker push alelouis/alelouis-dev:init
+      - name: Build and push docker image
+        run: |
+          docker build -t alelouis/alelouis-dev:init .
+          docker push alelouis/alelouis-dev:init
 
