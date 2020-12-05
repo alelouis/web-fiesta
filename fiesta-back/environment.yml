@@ -8,4 +8,6 @@ dependencies:
   - flask-socketio
   - requests
   - numpy
+  - gunicorn
+  - eventlet
 prefix: /home/alelouis/miniconda3/envs/fiesta
