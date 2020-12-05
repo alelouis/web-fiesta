@@ -44,7 +44,5 @@ jobs:
           ng build --prod
 
       - name: Build and push docker image
-        run: |
-          docker pull alelouis/web-fiesta:latest
-          docker build . --tag alelouis/web-fiesta:latest --push
+        run: docker build . --tag alelouis/web-fiesta:latest --push
 
