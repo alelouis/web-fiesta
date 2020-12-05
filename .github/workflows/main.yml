@@ -36,5 +36,6 @@ jobs:
 
       - name: Build and push docker image
         run: |
+          docker pull alelouis/alelouis-dev:latest
           docker build . --tag alelouis/alelouis-dev:latest --push
 
