@@ -24,6 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
       - uses: docker/setup-qemu-action@v1
       - uses: docker/setup-buildx-action@v1
         id: buildx
@@ -34,8 +35,14 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      
+      - name: angular build
+        run: |
+          cd fiesta-front && npm install
+          ng build --prod
+
       - name: Build and push docker image
         run: |
-          docker pull alelouis/alelouis-dev:latest
-          docker build . --tag alelouis/alelouis-dev:latest --push
+          docker pull alelouis/web-fiesta:latest
+          docker build . --tag alelouis/web-fiesta:latest --push
 
