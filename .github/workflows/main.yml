@@ -38,7 +38,9 @@ jobs:
       
       - name: angular build
         run: |
-          cd fiesta-front && npm install -g @angular/cli
+          cd fiesta-front 
+          npm install -g @angular/cli
+          npm install --save-dev @angular-devkit/build-angular
           ng build --prod
 
       - name: Build and push docker image
