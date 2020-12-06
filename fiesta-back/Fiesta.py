@@ -25,10 +25,10 @@ class Fiesta():
         self.notebooks = []
         self.current_turn = 0
         self.sampled_characters = []
+        self.bones = 0
 
         # Logging
         self.log = logging.getLogger("fiesta")
-
         formatter = logging.Formatter('%(asctime)s - %(name)8s - [%(levelname)s] %(message)s')
 
         fh = logging.FileHandler('logs/fiesta.log')
@@ -54,6 +54,7 @@ class Fiesta():
         self.log.info("Resetting game state.")
         self.notebooks = []
         self.current_turn = 0
+        self.bones = 0
         for sid in self.players:
             self.players[sid]['ready'] = False
             del self.players[sid]['answers']
@@ -121,6 +122,14 @@ class Fiesta():
         if not exists:
             self.players[sid] = {'nickname' : nickname, 'ready' : False}
         self.log.info(f"Added player {nickname} of sid {sid} to the game.")
+
+    def add_bone(self):
+        """ Adds a bone to game. """
+        self.bones += 1
+
+    def remove_bone(self):
+        """ Removes a bone from the game. """
+        self.bones -= 1
 
 # getters 
 
@@ -273,6 +282,17 @@ class Fiesta():
             all_ready &= self.players[sid]['ready']
         self.log.debug(f"Check if all players are ready: {all_ready}.")
         return all_ready
+
+    def check_if_all_answers_are_correct(self, corrections):
+        """ Checks if all answers are correct in order to give or not a memory bone
+        """
+        all_correct = True
+        for _, correction in corrections.items():
+            all_correct &= correction
+        if all_correct: 
+            self.add_bone()
+        self.log.debug(f"Check if all players answers are correct: {all_correct}.")
+        return all_correct
 
     def check_if_all_words_submitted(self):
         """ Checks if all players are ready

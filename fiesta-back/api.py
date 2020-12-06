@@ -137,7 +137,12 @@ def get_notebook():
     log.info('Received POST on endpoint /api/get_notebook.')
     notebook = fiesta.get_notebook_from_last_word(request.json['last_word'])
     corrections = fiesta.get_corrections(notebook)
-    socketio.emit('notebook', {'word_list' : notebook.words, 'corrections' : corrections})
+    fiesta.check_if_all_answers_are_correct(corrections)
+    log.info("Emit event 'notebook'.")
+    socketio.emit('notebook', {
+        'word_list': notebook.words, 
+        'corrections': corrections,
+        'bones': fiesta.bones})
     return jsonify(word_list = notebook.words, corrections = corrections)
 
 """ clears game state """
