@@ -79,6 +79,7 @@ class Fiesta():
         """
         self.log.info("Starting round.")
         order = np.arange(len(self.players))
+        self.bones = max(len(self.players) - 4, 0)
         np.random.shuffle(order)
         self.ordered_sid = np.array(list(self.players.keys()))[order]
         for sid in self.ordered_sid:
