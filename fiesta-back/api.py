@@ -1,4 +1,4 @@
-from flask import Flask, render_template, make_response, request, redirect, url_for, jsonify
+from flask import Flask, render_template, make_response, request, redirect, url_for, jsonify, Response
 from flask_socketio import SocketIO, emit
 from flask_cors import CORS
 import random
@@ -141,9 +141,17 @@ def get_notebook():
     log.info("Emit event 'notebook'.")
     socketio.emit('notebook', {
         'word_list': notebook.words, 
-        'corrections': corrections,
-        'bones': fiesta.bones})
-    return jsonify(word_list = notebook.words, corrections = corrections)
+        'corrections': corrections})
+    socketio.emit('bones', {'bones': fiesta.bones})
+    return Response(status=200)
+
+""" removes a bone from the game """
+@app.route('/api/consume_bone', methods = ['GET'])
+def consume_bone():
+    log.info('Received GET on endpoint /api/consume_bone.')
+    fiesta.remove_bone()
+    socketio.emit('bones', {'bones': fiesta.bones})
+    return Response(status=200)
 
 """ clears game state """
 @app.route('/api/clear_game', methods = ['GET'])

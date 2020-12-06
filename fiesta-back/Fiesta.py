@@ -127,6 +127,8 @@ class Fiesta():
         """ Adds a bone to game. """
         self.bones += 1
 
+# removers 
+
     def remove_bone(self):
         """ Removes a bone from the game. """
         self.bones -= 1
