@@ -1,4 +1,4 @@
-import numpy as np
+import random
 
 class Notebook():
     """Notebook of Fiesta game.
@@ -19,7 +19,7 @@ class Notebook():
         # TODO : Sampling sans remise
         with open('characters', encoding="utf8") as f:
             characters_list = f.read().splitlines()
-        self.character = np.random.choice(characters_list)
+        self.character = random.choice(characters_list)
         self.sid = sid
         self.words = [self.character]
         self.correct_answers = 0

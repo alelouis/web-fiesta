@@ -23,6 +23,7 @@ def test_round_started():
     fiesta.start_round()
     assert len(fiesta.notebooks) == len(fiesta.players)
     assert len(fiesta.ordered_sid) == len(fiesta.players)
+    assert len(fiesta.constraints) == fiesta.constraint_level
 
 def test_add_words():
     for sid in sids:
