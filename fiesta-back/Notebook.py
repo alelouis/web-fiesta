@@ -22,6 +22,7 @@ class Notebook():
         self.character = np.random.choice(characters_list)
         self.sid = sid
         self.words = [self.character]
+        self.correct_answers = 0
 
     def add_word(self, word):
         """ Adds a word to the notebook and increments round.
@@ -31,4 +32,5 @@ class Notebook():
             string of written word
         """
         self.words.append(word)
+
 

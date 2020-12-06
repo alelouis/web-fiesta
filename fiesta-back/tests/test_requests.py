@@ -68,5 +68,8 @@ def test_get_notebook():
     assert r.status_code == 200
 
 def test_consume_bone():
-    r = requests.get(url + '/api/consume_bone')
+    payload = {
+        'last_word' : 'sapin'
+        }
+    r = requests.post(url + '/api/consume_bone', json=payload)
     assert r.status_code == 200

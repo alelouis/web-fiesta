@@ -137,19 +137,22 @@ def get_notebook():
     log.info('Received POST on endpoint /api/get_notebook.')
     notebook = fiesta.get_notebook_from_last_word(request.json['last_word'])
     corrections = fiesta.get_corrections(notebook)
-    fiesta.check_if_all_answers_are_correct(corrections)
     log.info("Emit event 'notebook'.")
     socketio.emit('notebook', {
         'word_list': notebook.words, 
-        'corrections': corrections})
+        'corrections': corrections, 
+        'correct_answers': notebook.correct_answers})
     socketio.emit('bones', {'bones': fiesta.bones})
     return Response(status=200)
 
 """ removes a bone from the game """
-@app.route('/api/consume_bone', methods = ['GET'])
+@app.route('/api/consume_bone', methods = ['POST'])
 def consume_bone():
-    log.info('Received GET on endpoint /api/consume_bone.')
+    log.info('Received POST on endpoint /api/consume_bone.')
     fiesta.remove_bone()
+    notebook = fiesta.get_notebook_from_last_word(request.json['last_word'])
+    notebook.correct_answers += 1
+    socketio.emit('notebook', {'correct_answers': notebook.correct_answers})
     socketio.emit('bones', {'bones': fiesta.bones})
     return Response(status=200)
 
