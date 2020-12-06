@@ -61,3 +61,12 @@ def test_correction():
     fiesta.process_answers('4', {notebook.words[-1] : notebook.character})
     corrections = fiesta.get_corrections(fiesta.notebooks[0])
     assert len(corrections) == len(fiesta.players)
+
+def test_bone():
+    notebook = fiesta.notebooks[1]
+    fiesta.process_answers('1', {notebook.words[-1] : notebook.character})
+    fiesta.process_answers('2', {notebook.words[-1] : notebook.character})
+    fiesta.process_answers('3', {notebook.words[-1] : notebook.character})
+    fiesta.process_answers('4', {notebook.words[-1] : notebook.character})
+    corrections = fiesta.get_corrections(fiesta.notebooks[1])
+    assert fiesta.bones == 1

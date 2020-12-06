@@ -4,5 +4,5 @@ conda init bash
 
 source ~/.bashrc
 conda activate fiesta
-
-python api.py
+gunicorn -b 0.0.0.0:5000 -k eventlet api:app
+#python api.py

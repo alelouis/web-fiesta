@@ -1,4 +1,4 @@
-from flask import Flask, render_template, make_response, request, redirect, url_for, jsonify
+from flask import Flask, render_template, make_response, request, redirect, url_for, jsonify, Response
 from flask_socketio import SocketIO, emit
 from flask_cors import CORS
 import random
@@ -137,8 +137,24 @@ def get_notebook():
     log.info('Received POST on endpoint /api/get_notebook.')
     notebook = fiesta.get_notebook_from_last_word(request.json['last_word'])
     corrections = fiesta.get_corrections(notebook)
-    socketio.emit('notebook', {'word_list' : notebook.words, 'corrections' : corrections})
-    return jsonify(word_list = notebook.words, corrections = corrections)
+    log.info("Emit event 'notebook'.")
+    socketio.emit('notebook', {
+        'word_list': notebook.words, 
+        'corrections': corrections, 
+        'correct_answers': notebook.correct_answers})
+    socketio.emit('bones', {'bones': fiesta.bones})
+    return Response(status=200)
+
+""" removes a bone from the game """
+@app.route('/api/consume_bone', methods = ['POST'])
+def consume_bone():
+    log.info('Received POST on endpoint /api/consume_bone.')
+    fiesta.remove_bone()
+    notebook = fiesta.get_notebook_from_last_word(request.json['last_word'])
+    notebook.correct_answers += 1
+    socketio.emit('notebook', {'correct_answers': notebook.correct_answers})
+    socketio.emit('bones', {'bones': fiesta.bones})
+    return Response(status=200)
 
 """ clears game state """
 @app.route('/api/clear_game', methods = ['GET'])
@@ -152,5 +168,5 @@ def clear_game():
     return jsonify(cleared = True)
 
 # Launch application
-if __name__ == '__main__':
-    socketio.run(app, debug = True, host = '0.0.0.0')
+#if __name__ == '__main__':
+#    socketio.run(app, debug = True, host = '0.0.0.0')
