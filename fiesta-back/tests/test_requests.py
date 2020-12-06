@@ -60,12 +60,13 @@ def test_send_answers():
     assert r.status_code == 200
     assert 'answers' in r.json()
 
-def test_get_correction():
+def test_get_notebook():
     payload = {
-        'sid': 2, 
         'last_word' : 'sapin'
         }
     r = requests.post(url + '/api/get_notebook', json=payload)
     assert r.status_code == 200
-    assert 'word_list' in r.json()
-    assert 'corrections' in r.json()
+
+def test_consume_bone():
+    r = requests.get(url + '/api/consume_bone')
+    assert r.status_code == 200

@@ -1,1 +1,5 @@
 docker build -t web-fiesta .
+docker run --name test -it --rm -p -v /var/log/webfiesta:/app/logs 5000:5000 webfiesta
+
+npm install
+ng build --prod
