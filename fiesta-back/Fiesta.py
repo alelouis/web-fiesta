@@ -26,8 +26,8 @@ class Fiesta():
         self.current_turn = 0
         self.sampled_characters = []
         self.bones = 0
-        self.contraint_level = 1
-        self.contraints = []
+        self.constraint_level = 1
+        self.constraints = []
 
         # Logging
         self.log = logging.getLogger("fiesta")
@@ -78,14 +78,31 @@ class Fiesta():
         self.log.debug(f'Player {self.players[sid]} ready status changed to {ready}')
 
     def start_round(self):
-        """ Creates notebooks and randomize player order.
+        """ Initialize round.
+
+        - Sets bones number
+        - Samples constraints
+        - Shuffle player order
+         Instanciate and assign notebook to players
         """
         self.log.info("Starting round.")
-        order = list(range(len(self.players)))
+
+        # Setting bones number
         self.bones = max(len(self.players) - 4, 0)
+
+        # Sampling constraints
+        with open('constraints', encoding="utf8") as f:
+            constraints_list = f.read().splitlines()
+        for _ in range(self.constraint_level):
+            self.constraints.append(random.choice(constraints_list)) 
+
+        # Reordering players
+        order = list(range(len(self.players)))
         random.shuffle(order)
         sids = list(self.players.keys())
         self.ordered_sid = [sids[i] for i in order]
+
+        # Assigning notebooks
         for sid in self.ordered_sid:
             new_notebook = Notebook(sid)
             while new_notebook.character in self.sampled_characters:

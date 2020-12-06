@@ -53,7 +53,7 @@ def create_player():
         sid = request.json['sid'])
     log.info("Emit event 'players'.")
     socketio.emit('players', fiesta.players)
-    return jsonify(nickname=request.json['nickname'], sid=request.json['sid'])
+    return Response(status=200)
 
 """ set a player's ready status """
 @app.route('/api/set_ready', methods = ['PUT'])
@@ -66,8 +66,8 @@ def set_ready():
     if fiesta.check_if_all_ready():
         fiesta.start_round()
         log.info("Emit event 'all_ready'.")
-        socketio.emit('all_ready')
-    return jsonify(ready=request.json['ready'], sid=request.json['sid'])
+        socketio.emit('all_ready', {'contraints': fiesta.constraints})
+    return Response(status=200)
 
 """ send_word, cycle notebooks """
 @app.route('/api/send_word', methods = ['POST'])
@@ -84,8 +84,7 @@ def send_word():
         if fiesta.check_rotation_completed():
             log.info("Emit event 'rotation_completed'.")
             socketio.emit('rotation_completed')
-            
-    return jsonify(ready=request.json['word'], sid=request.json['sid'])
+    return Response(status=200)
 
 """ get last word from notebook """
 @app.route('/api/get_word', methods = ['POST'])
@@ -129,7 +128,7 @@ def send_answers():
     if fiesta.check_if_all_answers_submitted():
         log.info("Emit event 'all_answers_submitted'.")
         socketio.emit('all_answers_submitted')
-    return jsonify(answers = request.json['answers'], sid = request.json['sid'])
+    return Response(status=200)
 
 """ compute correction and broadcast notebook history """
 @app.route('/api/get_notebook', methods = ['POST'])
@@ -165,7 +164,7 @@ def clear_game():
     log.info("Emit event 'players'.")
     socketio.emit('clear_game')
     socketio.emit('players', fiesta.players)
-    return jsonify(cleared = True)
+    return Response(status=200)
 
 #Launch application
 if __name__ == '__main__':

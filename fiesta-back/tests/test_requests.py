@@ -8,22 +8,16 @@ def test_create_player():
     payload = {'nickname': 'alexis', 'sid': 2}
     r = requests.post(url + '/api/create_player', json=payload)
     assert r.status_code == 200
-    assert 'nickname' in r.json()
-    assert 'sid' in r.json()
 
 def test_set_ready():
     payload = {'ready': True, 'sid': 2}
     r = requests.put(url + '/api/set_ready', json=payload)
     assert r.status_code == 200
-    assert 'ready' in r.json()
-    assert 'sid' in r.json()
 
 def test_send_word():
     payload = {'word': 'sapin', 'sid': 2}
     r = requests.post(url + '/api/send_word', json=payload)
     assert r.status_code == 200
-    assert 'ready' in r.json()
-    assert 'sid' in r.json()
 
 def test_get_word():
     payload = {'sid': 2}
@@ -58,7 +52,6 @@ def test_send_answers():
         }
     r = requests.post(url + '/api/send_answers', json=payload)
     assert r.status_code == 200
-    assert 'answers' in r.json()
 
 def test_get_notebook():
     payload = {
