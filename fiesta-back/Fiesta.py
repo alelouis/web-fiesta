@@ -1,7 +1,7 @@
 from Notebook import Notebook
 import logging
 import sys
-import numpy as np
+import random
 
 class Fiesta():
     """Fiesta game state class.
@@ -26,6 +26,8 @@ class Fiesta():
         self.current_turn = 0
         self.sampled_characters = []
         self.bones = 0
+        self.contraint_level = 1
+        self.contraints = []
 
         # Logging
         self.log = logging.getLogger("fiesta")
@@ -55,6 +57,7 @@ class Fiesta():
         self.notebooks = []
         self.current_turn = 0
         self.bones = 0
+        self.contraints = []
         for sid in self.players:
             self.players[sid]['ready'] = False
             del self.players[sid]['answers']
@@ -78,10 +81,11 @@ class Fiesta():
         """ Creates notebooks and randomize player order.
         """
         self.log.info("Starting round.")
-        order = np.arange(len(self.players))
+        order = list(range(len(self.players)))
         self.bones = max(len(self.players) - 4, 0)
-        np.random.shuffle(order)
-        self.ordered_sid = np.array(list(self.players.keys()))[order]
+        random.shuffle(order)
+        sids = list(self.players.keys())
+        self.ordered_sid = [sids[i] for i in order]
         for sid in self.ordered_sid:
             new_notebook = Notebook(sid)
             while new_notebook.character in self.sampled_characters:
@@ -147,7 +151,7 @@ class Fiesta():
         next_sid_index
             next player session id
         """
-        current_sid_index = np.where(self.ordered_sid== sid)[0][0]
+        current_sid_index = self.ordered_sid.index(sid)
         next_sid_index = self.ordered_sid[(current_sid_index+1)%len(self.players)]
         return next_sid_index
 
@@ -162,7 +166,7 @@ class Fiesta():
         next_sid_index
             previous player session id
         """
-        current_sid_index = np.where(self.ordered_sid== sid)[0][0]
+        current_sid_index = self.ordered_sid.index(sid)
         previous_sid_index = self.ordered_sid[(current_sid_index-1)]
         return previous_sid_index
 
@@ -221,7 +225,7 @@ class Fiesta():
         missing = 8 - len(characters)
         with open('characters', encoding="utf8") as f:
             characters_list = f.read().splitlines()
-        characters += list(np.random.choice(characters_list, missing))
+        characters += list(random.choices(characters_list, k=missing))
         return characters
 
     def get_corrections(self, notebook):

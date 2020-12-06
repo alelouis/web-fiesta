@@ -167,6 +167,6 @@ def clear_game():
     socketio.emit('players', fiesta.players)
     return jsonify(cleared = True)
 
-# Launch application
-#if __name__ == '__main__':
-#    socketio.run(app, debug = True, host = '0.0.0.0')
+#Launch application
+if __name__ == '__main__':
+    socketio.run(app, debug = True, host = '0.0.0.0')
