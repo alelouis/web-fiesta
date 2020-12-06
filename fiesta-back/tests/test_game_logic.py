@@ -69,7 +69,4 @@ def test_bone():
     fiesta.process_answers('3', {notebook.words[-1] : notebook.character})
     fiesta.process_answers('4', {notebook.words[-1] : notebook.character})
     corrections = fiesta.get_corrections(fiesta.notebooks[1])
-    assert fiesta.bones == 0
-    correct = fiesta.check_if_all_answers_are_correct(corrections)
-    assert correct
     assert fiesta.bones == 1

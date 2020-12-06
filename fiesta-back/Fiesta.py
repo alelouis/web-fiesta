@@ -238,8 +238,13 @@ class Fiesta():
                 corrections[self.players[sid]['nickname']] = True
             else:
                 corrections[self.players[sid]['nickname']] = False
+        
+        self.check_if_all_answers_are_correct(corrections) # Adds bones if necessary
+        correct_answers = self.get_number_of_correct_answers(corrections)
+        notebook.correct_answers = correct_answers # Set number of correct answers to notebook
         return corrections
-    
+
+
     def get_notebook_from_last_word(self, last_word):
         """ Gets a notebook from its last word.
         Attributes
@@ -269,6 +274,23 @@ class Fiesta():
         for notebook in self.notebooks:
             if sid == notebook.sid:
                 return notebook
+
+    def get_number_of_correct_answers(self, corrections):
+        """ Gets the number of correct answers
+        Attributes
+        ----------
+        Corrections
+            dict of nickname:answers
+        Returns
+        -------
+        correct_answers
+            number of correct answers
+        """
+        correct_answers = 0
+        for _, correction in corrections.items():
+            correct_answers += correction
+        return correct_answers
+
 
 # checks 
 
