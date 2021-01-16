@@ -1,4 +1,6 @@
 from Notebook import Notebook
+import logging
+import sys
 import numpy as np
 
 class Fiesta():
@@ -18,28 +20,41 @@ class Fiesta():
 
     """
     def __init__(self):
+        # Game
         self.players = {}
         self.notebooks = []
         self.current_turn = 0
         self.sampled_characters = []
+        self.bones = 0
 
-    def __str__(self):
-        characters = [notebook.character for notebook in self.notebooks]
-        nicknames = [self.players[key]['nickname'] for key in self.players]
-        return f"Players:\n{nicknames}\nCharacters:\n{characters}"
+        # Logging
+        self.log = logging.getLogger("fiesta")
+        formatter = logging.Formatter('%(asctime)s - %(name)8s - [%(levelname)s] %(message)s')
+
+        fh = logging.FileHandler('logs/fiesta.log')
+        fh.setFormatter(formatter)
+        fh.setLevel(logging.DEBUG)
+
+        self.log.addHandler(fh)
+        self.log.setLevel(logging.DEBUG)
+
+        self.log.info("Fiesta game initilized.")
 
 # state
 
     def cycle_notebooks(self):
         """ Move notebooks along players."""
+        self.log.info("Cycling notebooks.")
         for notebook in self.notebooks:
             previous_sid = self.get_previous_player_sid(notebook.sid)
             notebook.sid = previous_sid
     
     def clear_game(self):
         """ Resets game state."""
+        self.log.info("Resetting game state.")
         self.notebooks = []
         self.current_turn = 0
+        self.bones = 0
         for sid in self.players:
             self.players[sid]['ready'] = False
             del self.players[sid]['answers']
@@ -57,10 +72,12 @@ class Fiesta():
             session id of the connection
         """
         self.players[sid]['ready'] = ready
+        self.log.debug(f'Player {self.players[sid]} ready status changed to {ready}')
 
     def start_round(self):
         """ Creates notebooks and randomize player order.
         """
+        self.log.info("Starting round.")
         order = np.arange(len(self.players))
         np.random.shuffle(order)
         self.ordered_sid = np.array(list(self.players.keys()))[order]
@@ -72,6 +89,7 @@ class Fiesta():
             self.notebooks.append(new_notebook)
     
     def process_answers(self, sid, answers):
+        self.log.info("Processing answers.")
         self.players[sid]['answers'] = answers
 
 # adders 
@@ -87,6 +105,7 @@ class Fiesta():
         """
         notebook = self.get_notebook_from_sid(sid)
         notebook.add_word(word)
+        self.log.debug(f"Added word {word} to sid {sid}.")
 
     def add_player(self, nickname, sid):
         """ Adds new player to the game.
@@ -102,6 +121,17 @@ class Fiesta():
                 exists = True
         if not exists:
             self.players[sid] = {'nickname' : nickname, 'ready' : False}
+        self.log.info(f"Added player {nickname} of sid {sid} to the game.")
+
+    def add_bone(self):
+        """ Adds a bone to game. """
+        self.bones += 1
+
+# removers 
+
+    def remove_bone(self):
+        """ Removes a bone from the game. """
+        self.bones -= 1
 
 # getters 
 
@@ -156,6 +186,7 @@ class Fiesta():
         last_words
             list of last words
         """
+        self.log.debug("Gets all the last words.")
         last_words = []
         for sid in self.players:
             last_words.append(self.get_last_word_from_sid(sid))
@@ -182,6 +213,7 @@ class Fiesta():
         characters
             list of shuffled characters
         """
+        self.log.debug("Gets all the last words.")
         characters = []
         for notebook in self.notebooks:
             characters.append(notebook.character)
@@ -198,6 +230,7 @@ class Fiesta():
         corrections
             dictionnary of nickname with bool correction status
         """
+        self.log.debug(f"Gets the corrections for notebook with last word {notebook.words[-1]}.")
         corrections = {} 
         last_word = notebook.words[-1]
         for sid in self.players:
@@ -205,8 +238,13 @@ class Fiesta():
                 corrections[self.players[sid]['nickname']] = True
             else:
                 corrections[self.players[sid]['nickname']] = False
+        
+        self.check_if_all_answers_are_correct(corrections) # Adds bones if necessary
+        correct_answers = self.get_number_of_correct_answers(corrections)
+        notebook.correct_answers = correct_answers # Set number of correct answers to notebook
         return corrections
-    
+
+
     def get_notebook_from_last_word(self, last_word):
         """ Gets a notebook from its last word.
         Attributes
@@ -237,6 +275,23 @@ class Fiesta():
             if sid == notebook.sid:
                 return notebook
 
+    def get_number_of_correct_answers(self, corrections):
+        """ Gets the number of correct answers
+        Attributes
+        ----------
+        Corrections
+            dict of nickname:answers
+        Returns
+        -------
+        correct_answers
+            number of correct answers
+        """
+        correct_answers = 0
+        for _, correction in corrections.items():
+            correct_answers += correction
+        return correct_answers
+
+
 # checks 
 
     def check_if_all_ready(self):
@@ -249,7 +304,19 @@ class Fiesta():
         all_ready = True
         for sid in self.players:
             all_ready &= self.players[sid]['ready']
+        self.log.debug(f"Check if all players are ready: {all_ready}.")
         return all_ready
+
+    def check_if_all_answers_are_correct(self, corrections):
+        """ Checks if all answers are correct in order to give or not a memory bone
+        """
+        all_correct = True
+        for _, correction in corrections.items():
+            all_correct &= correction
+        if all_correct: 
+            self.add_bone()
+        self.log.debug(f"Check if all players answers are correct: {all_correct}.")
+        return all_correct
 
     def check_if_all_words_submitted(self):
         """ Checks if all players are ready
@@ -262,6 +329,7 @@ class Fiesta():
         for notebook in self.notebooks:
             word_submitted = (len(notebook.words) == 2 + self.current_turn)
             all_words_submitted &= word_submitted
+        self.log.debug(f"Check if all words are submitted: {all_words_submitted}.")
         return all_words_submitted   
 
     def check_if_all_answers_submitted(self):
@@ -271,10 +339,12 @@ class Fiesta():
         all_answers_submitted
             boolean
         """
+        self.log.debug(f"Check if all answers are submitted.")
         all_answers_submitted = True
         for sid in self.players:
             answer_submitted = 'answers' in self.players[sid]
             all_answers_submitted &= answer_submitted
+        self.log.debug(f"Check if all answers are submitted: {all_answers_submitted}.")
         return all_answers_submitted   
 
     def check_rotation_completed(self):
@@ -285,4 +355,5 @@ class Fiesta():
             boolean
         """
         rotation_completed = (self.current_turn == 4)
+        self.log.debug(f"Check if rotation is completed: {rotation_completed}.")
         return rotation_completed

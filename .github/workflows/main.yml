@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
+jobs:
+  # Builds the statics files and the Docker image
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - uses: docker/setup-qemu-action@v1
+      - uses: docker/setup-buildx-action@v1
+        id: buildx
+        with:
+          install: true
+      - uses: docker/login-action@v1 
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build angular
+        run: |
+          cd fiesta-front 
+          npm install -g @angular/cli
+          npm install --save-dev @angular-devkit/build-angular
+          ng build --prod
+
+      - name: Build and push Docker image
+        run: docker build . --tag alelouis/web-fiesta:latest --push
+
