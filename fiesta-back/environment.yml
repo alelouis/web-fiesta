@@ -5,9 +5,10 @@ dependencies:
   - python=3.7
   - flask
   - flask-cors
-  - flask-socketio
+  - flask-socketio=4.3.2
+  - python-engineio=3.13.2
+  - python-socketio=4.6.1
   - requests
   - numpy
   - gunicorn
-  - eventlet
-prefix: /home/alelouis/miniconda3/envs/fiesta
+  - eventlet=0.30.2
