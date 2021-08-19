@@ -18,7 +18,7 @@ npm install
 Run the front end:  
 ```bash
 cd fiesta-front  
-ng build` 
+ng build
 ng serve
 ```
 
@@ -27,7 +27,7 @@ Setup:
 ```bash
 cd fiesta-back
 conda env create -f environment.yml -n fiesta 
-conda activate fiesta`
+conda activate fiesta
 ```
 
 Run the back end:  
