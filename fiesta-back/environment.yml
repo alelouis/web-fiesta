@@ -9,6 +9,5 @@ dependencies:
   - python-engineio=3.13.2
   - python-socketio=4.6.1
   - requests
-  - numpy
   - gunicorn
   - eventlet=0.30.2
