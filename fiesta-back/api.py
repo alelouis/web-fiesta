@@ -73,9 +73,16 @@ def set_ready():
 @app.route('/api/send_word', methods = ['POST'])
 def send_word():
     log.info('Received POST on endpoint /api/send_word.')
+    
     fiesta.add_word_from_sid(
         word = request.json['word'], 
         sid = request.json['sid'])
+
+    fiesta.set_turn_ready(
+        ready = True, 
+        sid = request.json['sid'])
+    socketio.emit('players', fiesta.players)
+
     if fiesta.check_if_all_words_submitted():
         log.info("Emit event 'all_words_submitted'.")
         socketio.emit('all_words_submitted')

@@ -8,7 +8,7 @@
 
     <ng-container *ngIf="!logged">
         <mat-card>
-            <p>Coucou {{nickname}}</p>
+            <p>Entrez votre pseudo : {{nickname}}</p>
             <p>
                 <mat-form-field appearance="outline">
                     <mat-label>Surnom</mat-label>
@@ -58,7 +58,6 @@
     </ng-container>
 
     <div *ngIf="allReady && logged">
-        <h1>LE JEU EST LANCE !!!</h1>
         <app-game></app-game>
     </div>
 

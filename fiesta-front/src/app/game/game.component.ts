@@ -20,6 +20,9 @@ export class GameComponent implements OnInit {
 
   cardFlipped = false;
 
+  players: any[] = [];
+  playerMap: any;
+
   rotationCompleted = true;
   allAnswersSubmitted = false;
 
@@ -31,6 +34,16 @@ export class GameComponent implements OnInit {
 
   ngOnInit(): void {
     this.getWord();
+
+    this.playerService.getPlayers().subscribe((playerMap) => {
+      this.playerMap = playerMap;
+      this.players = Object.keys(playerMap).map((key) => {
+        const value = playerMap[key];
+        return {...value, id: key}
+      });
+    }, (error) => {
+      console.error(error);
+    });
 
     this.playerService.getAllWordsSubmitted().subscribe(() => {
       this.getWord();

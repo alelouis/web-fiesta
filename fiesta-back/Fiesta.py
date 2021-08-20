@@ -60,6 +60,7 @@ class Fiesta():
         self.contraints = []
         for sid in self.players:
             self.players[sid]['ready'] = False
+            self.players[sid]['turn_ready'] = False
             del self.players[sid]['answers']
 
 
@@ -76,6 +77,18 @@ class Fiesta():
         """
         self.players[sid]['ready'] = ready
         self.log.debug(f'Player {self.players[sid]} ready status changed to {ready}')
+
+    def set_turn_ready(self, ready, sid):
+        """ Sets turn ready status of player.
+        Attributes
+        ----------
+        ready
+            boolean
+        sid
+            session id of the connection
+        """
+        self.players[sid]['turn_ready'] = ready
+        self.log.debug(f'Player {self.players[sid]} turn ready status changed to {ready}')
 
     def start_round(self):
         """ Initialize round.
@@ -142,7 +155,7 @@ class Fiesta():
         if sid in self.players:
                 exists = True
         if not exists:
-            self.players[sid] = {'nickname' : nickname, 'ready' : False}
+            self.players[sid] = {'nickname' : nickname, 'ready' : False, 'turn_ready' : False}
         self.log.info(f"Added player {nickname} of sid {sid} to the game.")
 
     def add_bone(self):
