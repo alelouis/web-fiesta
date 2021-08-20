@@ -10,6 +10,22 @@
 
 <ng-container *ngIf="gameStage === 'WORDS'">
     <p *ngIf="waiting">En attente des autres...</p>
+    <mat-card *ngIf="waiting">
+        <mat-list class="p">
+            <mat-list-item *ngFor="let player of players">
+                <span>{{player.nickname}}</span>
+                <i style="flex: 1"></i>
+                <mat-chip-list>
+                    <mat-chip *ngIf="player.turn_ready" color="primary" selected>
+                        <fa-icon icon="check"></fa-icon>
+                    </mat-chip>
+                    <mat-chip *ngIf="!player.turn_ready" color="accent" selected>
+                        <fa-icon icon="pen"></fa-icon>
+                    </mat-chip>
+                </mat-chip-list>
+            </mat-list-item>
+        </mat-list>
+    </mat-card>
 
     <mat-card *ngIf="!waiting">
 
