@@ -29,12 +29,10 @@
 
     <mat-card *ngIf="!waiting">
 
-        <p *ngIf="game?.turn > 0">
-            Tour {{game?.turn}}
-        </p>
+        <p class="title" *ngIf="game?.turn > 0"> Tour {{game?.turn}} </p>
 
         <div *ngIf="game?.turn === 0">
-            <p>Tour 0</p>
+            <p class="title">Tour 0</p>
             <div class="word-card" [class.flipped]="cardFlipped" (click)="cardFlipped = !cardFlipped">
                 <div>{{game?.word}}</div>
             </div>

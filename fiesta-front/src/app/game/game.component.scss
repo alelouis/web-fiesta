@@ -1,6 +1,15 @@
 
 @import '~@angular/material/theming';
 
+* { 
+    font-size: 1.3rem;
+  }
+  
+.title { 
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
 .word-card {
     position: relative;
     z-index: 100;
