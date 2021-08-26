@@ -31,7 +31,7 @@ jobs:
         
       - name: Pytest
         run: |
-          cd fiesta-bach 
+          cd fiesta-back
           conda env create -f environment.yml
           conda activate fiesta
           pytest -s
