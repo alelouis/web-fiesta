@@ -27,13 +27,14 @@ jobs:
         id: buildx
         with:
           install: true
-      - uses: conda-incubator/setup-miniconda@v2.1.1   
+      - uses: conda-incubator/setup-miniconda@v2.1.1 
+        with:
+          activate-environment: fiesta
+          environment-file: fiesta-back/environment.yml
         
       - name: Pytest
         run: |
           cd fiesta-back
-          conda env create -f environment.yml
-          conda activate fiesta
           pytest -s
 
       - name: Build angular
