@@ -11,8 +11,20 @@ on:
   workflow_dispatch:
   
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
+    steps:
+      - uses: conda-incubator/setup-miniconda@v2.1.1 
+        with:
+          activate-environment: fiesta
+          environment-file: fiesta-back/environment.yml
+
+      - name: Pytest
+        run: |
+          cd fiesta-back
+          pytest -s
+
+  build:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -27,15 +39,6 @@ jobs:
         id: buildx
         with:
           install: true
-      - uses: conda-incubator/setup-miniconda@v2.1.1 
-        with:
-          activate-environment: fiesta
-          environment-file: fiesta-back/environment.yml
-        
-      - name: Pytest
-        run: |
-          cd fiesta-back
-          pytest -s
 
       - name: Build angular
         run: |

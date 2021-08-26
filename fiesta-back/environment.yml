@@ -11,3 +11,4 @@ dependencies:
   - requests
   - gunicorn
   - eventlet=0.30.2
+  - pytest=6.2.4
