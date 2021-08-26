@@ -43,8 +43,8 @@ jobs:
       - name: Pytest
         uses: conda-incubator/setup-miniconda@v2.1.1
         run: |
-        cd fiesta-front 
-        npm install -g @angular/cli
-        npm install --save-dev @angular-devkit/build-angular
-        ng build --prod
+          cd fiesta-front 
+          npm install -g @angular/cli
+          npm install --save-dev @angular-devkit/build-angular
+          ng build --prod
 
