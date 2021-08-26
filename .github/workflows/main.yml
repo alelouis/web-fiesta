@@ -31,10 +31,10 @@ jobs:
         
       - name: Pytest
         run: |
-          cd fiesta-front 
-          npm install -g @angular/cli
-          npm install --save-dev @angular-devkit/build-angular
-          ng build --prod
+          cd fiesta-bach 
+          conda env create -f environment.yml
+          conda activate fiesta
+          pytest -s
 
       - name: Build angular
         run: |
