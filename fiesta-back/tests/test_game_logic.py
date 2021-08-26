@@ -1,6 +1,4 @@
 import sys
-
-from flask_cors.core import get_allow_headers
 sys.path.append('.')
 import Fiesta
 

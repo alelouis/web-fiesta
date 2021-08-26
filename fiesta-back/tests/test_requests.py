@@ -1,8 +1,17 @@
 import requests
-from flask import jsonify
-import json
+import subprocess
+import time
 
-url = 'http://0.0.0.0:5000'
+host = '0.0.0.0'
+port = 5000
+url = f'http://{host}:{port}'
+
+def setup_module(module):
+    subprocess.run([f'gunicorn -b {host}:{port} -k eventlet api:app > null &'], shell = True)
+    time.sleep(0.5)
+
+def teardown_module(module):
+    subprocess.run(['pkill -f gunicorn'], shell = True)
 
 def test_create_player():
     payload = {'nickname': 'alexis', 'sid': 2}
@@ -66,3 +75,5 @@ def test_consume_bone():
         }
     r = requests.post(url + '/api/consume_bone', json=payload)
     assert r.status_code == 200
+
+subprocess.run(['pkill -9 gunicorn'], shell = True)
