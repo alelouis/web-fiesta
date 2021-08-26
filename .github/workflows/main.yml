@@ -23,6 +23,7 @@ jobs:
       - name: Pytest
         run: |
           cd fiesta-back
+          conda activate fiesta
           pytest -s
 
   build:
