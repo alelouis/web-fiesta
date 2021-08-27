@@ -1,0 +1,1001 @@
+1630063821023	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.bBJP505YNG4e"
+Error: no DISPLAY environment variable specified
+1630063821413	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.cUP8bzJUK9n2"
+Error: no DISPLAY environment variable specified
+1630063821563	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.fBU5zrhrqcbC"
+Error: no DISPLAY environment variable specified
+1630063950225	geckodriver	INFO	Listening on 127.0.0.1:62454
+1630063950247	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileiwxQIT"
+Error: no DISPLAY environment variable specified
+1630063950362	geckodriver	INFO	Listening on 127.0.0.1:62461
+1630063950379	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile6RYrKG"
+Error: no DISPLAY environment variable specified
+1630063950496	geckodriver	INFO	Listening on 127.0.0.1:62468
+1630063950513	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileyjAzZu"
+Error: no DISPLAY environment variable specified
+1630063974097	geckodriver	INFO	Listening on 127.0.0.1:61232
+1630063974118	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileu1mY8r"
+Error: no DISPLAY environment variable specified
+1630063974233	geckodriver	INFO	Listening on 127.0.0.1:61239
+1630063974256	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilehmKxsL"
+Error: no DISPLAY environment variable specified
+1630063974373	geckodriver	INFO	Listening on 127.0.0.1:61246
+1630063974399	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilemnhLRX"
+Error: no DISPLAY environment variable specified
+1630063982516	geckodriver	INFO	Listening on 127.0.0.1:61255
+1630063982546	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilejQ4bsJ"
+Error: no DISPLAY environment variable specified
+1630063982663	geckodriver	INFO	Listening on 127.0.0.1:61262
+1630063982684	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileSb57Hn"
+Error: no DISPLAY environment variable specified
+1630063982802	geckodriver	INFO	Listening on 127.0.0.1:61269
+1630063982823	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileKGy6zC"
+Error: no DISPLAY environment variable specified
+1630064029089	geckodriver	INFO	Listening on 127.0.0.1:61287
+1630064029110	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile8E0Mlc"
+*** You are running in headless mode.
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630064029706	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile8E0Mlc/search.json.mozlz4", (void 0)))
+1630064031406	Marionette	INFO	Listening on port 61292
+1630064031445	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630064146687	geckodriver	INFO	Listening on 127.0.0.1:61367
+1630064146709	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileSFeE8B"
+*** You are running in headless mode.
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630064147171	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileSFeE8B/search.json.mozlz4", (void 0)))
+1630064148942	Marionette	INFO	Listening on port 61372
+1630064149046	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630064164662	geckodriver	INFO	Listening on 127.0.0.1:61448
+1630064164688	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilehKfIU3"
+*** You are running in headless mode.
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630064165139	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilehKfIU3/search.json.mozlz4", (void 0)))
+1630064166887	Marionette	INFO	Listening on port 61453
+1630064166927	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630064167668	geckodriver	INFO	Listening on 127.0.0.1:61510
+1630064167688	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileaIIVwY"
+Error: no DISPLAY environment variable specified
+1630064167804	geckodriver	INFO	Listening on 127.0.0.1:61519
+1630064167825	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilexMkcOr"
+Error: no DISPLAY environment variable specified
+1630064167943	geckodriver	INFO	Listening on 127.0.0.1:61528
+1630064167962	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileYq5TTh"
+Error: no DISPLAY environment variable specified
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1630064842886	geckodriver	INFO	Listening on 127.0.0.1:57259
+1630064842917	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilepc1vjM"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630064843420	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilepc1vjM/search.json.mozlz4", (void 0)))
+1630064845339	Marionette	INFO	Listening on port 57264
+1630064845455	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065068171	geckodriver	INFO	Listening on 127.0.0.1:57371
+1630065068202	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilef21pOC"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065068714	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilef21pOC/search.json.mozlz4", (void 0)))
+1630065070758	Marionette	INFO	Listening on port 57376
+1630065070835	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065078358	Marionette	INFO	Stopped listening on port 57376
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630065080384	Marionette	INFO	Stopped listening on port 57264
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630065108588	geckodriver	INFO	Listening on 127.0.0.1:57452
+1630065108616	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileO0jOSg"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065109136	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileO0jOSg/search.json.mozlz4", (void 0)))
+1630065111103	Marionette	INFO	Listening on port 57457
+1630065111170	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065123612	Marionette	INFO	Stopped listening on port 57457
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630065125275	geckodriver	INFO	Listening on 127.0.0.1:57529
+1630065125297	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileoFWWYX"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065125792	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileoFWWYX/search.json.mozlz4", (void 0)))
+1630065128005	Marionette	INFO	Listening on port 57534
+1630065128054	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065210578	geckodriver	INFO	Listening on 127.0.0.1:59876
+1630065210603	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile99fPAv"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065211126	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile99fPAv/search.json.mozlz4", (void 0)))
+1630065213151	Marionette	INFO	Listening on port 59881
+1630065213236	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065223435	Marionette	INFO	Stopped listening on port 59881
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630065224332	Marionette	INFO	Stopped listening on port 57534
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630065240385	geckodriver	INFO	Listening on 127.0.0.1:59958
+1630065240407	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilern5jRj"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065240910	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilern5jRj/search.json.mozlz4", (void 0)))
+1630065242990	Marionette	INFO	Listening on port 59963
+1630065243064	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065253515	Marionette	INFO	Stopped listening on port 59963
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630065278980	geckodriver	INFO	Listening on 127.0.0.1:60039
+1630065279002	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilefelOAg"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065279503	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilefelOAg/search.json.mozlz4", (void 0)))
+1630065281498	Marionette	INFO	Listening on port 60044
+1630065281544	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:4200"
+1630065335727	geckodriver	INFO	Listening on 127.0.0.1:60122
+1630065335757	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiletEAHeQ"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065336268	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiletEAHeQ/search.json.mozlz4", (void 0)))
+1630065338375	Marionette	INFO	Listening on port 60127
+1630065338493	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065369645	geckodriver	INFO	Listening on 127.0.0.1:60205
+1630065369676	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiler2UuaN"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065370182	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiler2UuaN/search.json.mozlz4", (void 0)))
+1630065372197	Marionette	INFO	Listening on port 60210
+1630065372311	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065376054	Marionette	INFO	Stopped listening on port 60210
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630065377525	Marionette	INFO	Stopped listening on port 60127
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630065378255	Marionette	INFO	Stopped listening on port 60044
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630065383588	geckodriver	INFO	Listening on 127.0.0.1:60284
+1630065383617	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilesO1JuS"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065384128	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilesO1JuS/search.json.mozlz4", (void 0)))
+1630065386224	Marionette	INFO	Listening on port 60289
+1630065386262	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065397955	Marionette	INFO	Stopped listening on port 60289
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630065569482	geckodriver	INFO	Listening on 127.0.0.1:60407
+1630065569507	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileB5cOMl"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065570013	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileB5cOMl/search.json.mozlz4", (void 0)))
+1630065572146	Marionette	INFO	Listening on port 60412
+1630065572241	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065573054	geckodriver	INFO	Listening on 127.0.0.1:60472
+1630065574086	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileJ5pjv9"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065574590	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileJ5pjv9/search.json.mozlz4", (void 0)))
+1630065576867	Marionette	INFO	Listening on port 60490
+1630065576941	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065579918	Marionette	INFO	Stopped listening on port 60412
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630065580928	Marionette	INFO	Stopped listening on port 60490
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630065613618	geckodriver	INFO	Listening on 127.0.0.1:60571
+1630065613641	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilewdg7e8"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065614143	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilewdg7e8/search.json.mozlz4", (void 0)))
+1630065616024	Marionette	INFO	Listening on port 60576
+1630065616084	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065616772	geckodriver	INFO	Listening on 127.0.0.1:60628
+1630065616801	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileuq2Xaw"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065617362	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileuq2Xaw/search.json.mozlz4", (void 0)))
+1630065619332	Marionette	INFO	Listening on port 60634
+1630065619443	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065684294	geckodriver	INFO	Listening on 127.0.0.1:60732
+1630065684321	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile8xAUXd"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065684844	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile8xAUXd/search.json.mozlz4", (void 0)))
+1630065686702	Marionette	INFO	Listening on port 60738
+1630065686762	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065689941	Marionette	INFO	Stopped listening on port 60738
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630065690388	Marionette	INFO	Stopped listening on port 60634
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630065691017	Marionette	INFO	Stopped listening on port 60576
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630065698735	geckodriver	INFO	Listening on 127.0.0.1:60797
+1630065698758	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile2nBiuY"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065699288	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile2nBiuY/search.json.mozlz4", (void 0)))
+1630065701176	Marionette	INFO	Listening on port 60802
+1630065701293	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065702053	geckodriver	INFO	Listening on 127.0.0.1:60857
+1630065702093	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilezEyZSo"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065702753	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilezEyZSo/search.json.mozlz4", (void 0)))
+1630065705207	Marionette	INFO	Listening on port 60863
+1630065705253	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065711611	Marionette	INFO	Stopped listening on port 60863
+1630065711624	Marionette	INFO	Stopped listening on port 60802
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1630065766444	geckodriver	INFO	Listening on 127.0.0.1:60962
+1630065766466	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilejwL1kV"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065766972	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilejwL1kV/search.json.mozlz4", (void 0)))
+1630065768977	Marionette	INFO	Listening on port 60967
+1630065769025	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065769885	geckodriver	INFO	Listening on 127.0.0.1:61024
+1630065770918	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileiQgmfM"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065771498	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileiQgmfM/search.json.mozlz4", (void 0)))
+1630065773713	Marionette	INFO	Listening on port 61040
+1630065773767	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065777121	Marionette	INFO	Stopped listening on port 61040
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630065777916	Marionette	INFO	Stopped listening on port 60967
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1630065796173	geckodriver	INFO	Listening on 127.0.0.1:60461
+1630065796199	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileAXf5Jw"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065796759	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileAXf5Jw/search.json.mozlz4", (void 0)))
+Exiting due to channel error.
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+console.warn: services.settings: main/query-stripping sync interrupted by shutdown
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+console.error: "Could not load engine google@search.mozilla.org: AbortError: IOUtils.profileBeforeChange getter: IOUtils: profileBeforeChange phase has already finished"
+console.error: "Could not load engine amazondotcom@search.mozilla.org: TypeError: AddonManagerInternal._getProviderByName(...) is undefined"
+console.error: "Could not load engine wikipedia@search.mozilla.org: TypeError: AddonManagerInternal._getProviderByName(...) is undefined"
+console.error: "Could not load engine bing@search.mozilla.org: TypeError: AddonManagerInternal._getProviderByName(...) is undefined"
+console.error: "Could not load engine ddg@search.mozilla.org: TypeError: AddonManagerInternal._getProviderByName(...) is undefined"
+console.warn: SearchService: "_init: abandoning init due to shutting down"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/IndexedDB.jsm, line 370: UnknownError: IDBDatabase.transaction: Can't start IndexedDB transaction during shutdown
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: region-update-timer
+1630065798343	geckodriver	INFO	Listening on 127.0.0.1:60497
+1630065798373	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilentfOF2"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065798890	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilentfOF2/search.json.mozlz4", (void 0)))
+1630065800764	Marionette	INFO	Listening on port 60502
+1630065800819	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065801492	geckodriver	INFO	Listening on 127.0.0.1:60557
+1630065801521	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilejExUaa"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065802082	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilejExUaa/search.json.mozlz4", (void 0)))
+1630065804224	Marionette	INFO	Listening on port 60563
+1630065804270	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065805004	geckodriver	INFO	Listening on 127.0.0.1:60651
+1630065805028	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile6YFbdT"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065805608	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile6YFbdT/search.json.mozlz4", (void 0)))
+1630065807620	Marionette	INFO	Listening on port 60656
+1630065807680	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065812799	Marionette	INFO	Stopped listening on port 60502
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630065813647	Marionette	INFO	Stopped listening on port 60563
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1630065814367	Marionette	INFO	Stopped listening on port 60656
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630065936743	geckodriver	INFO	Listening on 127.0.0.1:60760
+1630065936765	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileWDTgub"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065937276	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileWDTgub/search.json.mozlz4", (void 0)))
+1630065939402	Marionette	INFO	Listening on port 60765
+1630065939505	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065940176	geckodriver	INFO	Listening on 127.0.0.1:60825
+1630065940208	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile3BLXB4"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065940777	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile3BLXB4/search.json.mozlz4", (void 0)))
+1630065942826	Marionette	INFO	Listening on port 60831
+1630065942872	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630065943614	geckodriver	INFO	Listening on 127.0.0.1:60909
+1630065943640	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileAmEnPJ"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630065944214	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileAmEnPJ/search.json.mozlz4", (void 0)))
+1630065946240	Marionette	INFO	Listening on port 60915
+1630065946293	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066023962	geckodriver	INFO	Listening on 127.0.0.1:61014
+1630066023986	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileb36Hom"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066024506	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileb36Hom/search.json.mozlz4", (void 0)))
+1630066026564	Marionette	INFO	Listening on port 61019
+1630066026631	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066027474	geckodriver	INFO	Listening on 127.0.0.1:61082
+1630066027520	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileSoGaqq"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066028285	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileSoGaqq/search.json.mozlz4", (void 0)))
+1630066030467	Marionette	INFO	Listening on port 61088
+1630066030595	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066031285	geckodriver	INFO	Listening on 127.0.0.1:61160
+1630066031315	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile6PFwZF"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066031932	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile6PFwZF/search.json.mozlz4", (void 0)))
+1630066034043	Marionette	INFO	Listening on port 61165
+1630066034159	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+1630066069116	Marionette	INFO	Stopped listening on port 61165
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630066069617	Marionette	INFO	Stopped listening on port 61088
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630066070384	Marionette	INFO	Stopped listening on port 61019
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630066071706	Marionette	INFO	Stopped listening on port 60765
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630066072282	Marionette	INFO	Stopped listening on port 60831
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1630066072814	Marionette	INFO	Stopped listening on port 60915
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630066165433	geckodriver	INFO	Listening on 127.0.0.1:61359
+1630066165459	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileKsVswk"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066166089	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileKsVswk/search.json.mozlz4", (void 0)))
+1630066168219	Marionette	INFO	Listening on port 61364
+1630066168302	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066169030	geckodriver	INFO	Listening on 127.0.0.1:61439
+1630066169056	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilelm1EPJ"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066169627	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilelm1EPJ/search.json.mozlz4", (void 0)))
+1630066171526	Marionette	INFO	Listening on port 61444
+1630066171595	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066172305	geckodriver	INFO	Listening on 127.0.0.1:61521
+1630066173350	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileS6Bkpj"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066173903	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileS6Bkpj/search.json.mozlz4", (void 0)))
+1630066175762	Marionette	INFO	Listening on port 61536
+1630066175804	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066271881	Marionette	INFO	Stopped listening on port 61364
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630066272245	Marionette	INFO	Stopped listening on port 61444
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630066272905	Marionette	INFO	Stopped listening on port 61536
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1630066285463	geckodriver	INFO	Listening on 127.0.0.1:61637
+1630066285486	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile8xZSYK"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066285991	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile8xZSYK/search.json.mozlz4", (void 0)))
+1630066287984	Marionette	INFO	Listening on port 61642
+1630066288042	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066288736	geckodriver	INFO	Listening on 127.0.0.1:61702
+1630066288759	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileYE8KIT"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066289349	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileYE8KIT/search.json.mozlz4", (void 0)))
+1630066291658	Marionette	INFO	Listening on port 61708
+1630066291717	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066292390	geckodriver	INFO	Listening on 127.0.0.1:61781
+1630066292411	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile74XYDe"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066292969	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile74XYDe/search.json.mozlz4", (void 0)))
+1630066295024	Marionette	INFO	Listening on port 61786
+1630066295071	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:4200"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:4200"
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+JavaScript error: resource://devtools/client/inspector/rules/utils/utils.js, line 192: TypeError: rule is undefined
+JavaScript error: resource://devtools/client/inspector/rules/utils/utils.js, line 192: TypeError: rule is undefined
+JavaScript error: resource://devtools/client/inspector/rules/utils/utils.js, line 192: TypeError: rule is undefined
+1630066463729	Marionette	INFO	Stopped listening on port 61708
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630066464248	Marionette	INFO	Stopped listening on port 61786
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630066464658	Marionette	INFO	Stopped listening on port 61642
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630066468575	geckodriver	INFO	Listening on 127.0.0.1:65167
+1630066468596	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile4NHB4g"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066469104	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile4NHB4g/search.json.mozlz4", (void 0)))
+1630066471103	Marionette	INFO	Listening on port 65172
+1630066471156	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066471844	geckodriver	INFO	Listening on 127.0.0.1:65230
+1630066471871	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilerHLXAp"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066472612	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilerHLXAp/search.json.mozlz4", (void 0)))
+1630066474818	Marionette	INFO	Listening on port 65236
+1630066474926	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066475593	geckodriver	INFO	Listening on 127.0.0.1:65314
+1630066475614	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileJIodGr"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066476180	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileJIodGr/search.json.mozlz4", (void 0)))
+1630066478176	Marionette	INFO	Listening on port 65319
+1630066478253	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066562514	Marionette	INFO	Stopped listening on port 65172
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 103: Error: Connection closed, pending request to server0.conn0.child4/domnode185, type setNodeValue failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:289:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+showTextEditor/done/</<@resource://devtools/client/inspector/markup/views/text-editor.js:101:25
+do@resource://devtools/client/shared/undo.js:70:16
+endBatch@resource://devtools/client/shared/undo.js:81:11
+do@resource://devtools/client/shared/undo.js:93:10
+showTextEditor/done/<@resource://devtools/client/inspector/markup/views/text-editor.js:99:31
+process@resource://gre/modules/Promise-backend.js:952:38
+walkerLoop@resource://gre/modules/Promise-backend.js:836:29
+Promise*scheduleWalkerLoop@resource://gre/modules/Promise-backend.js:766:19
+schedulePromise@resource://gre/modules/Promise-backend.js:800:12
+completePromise@resource://gre/modules/Promise-backend.js:732:12
+
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630066562919	Marionette	INFO	Stopped listening on port 65236
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630066563361	Marionette	INFO	Stopped listening on port 65319
+console.error: PushServiceWebSocket: 
+  _beginWSSetup: Not in shutdown state! Current state
+  2
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630066566199	geckodriver	INFO	Listening on 127.0.0.1:65411
+1630066566226	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileYLSfWE"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066566736	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileYLSfWE/search.json.mozlz4", (void 0)))
+1630066568750	Marionette	INFO	Listening on port 65416
+1630066568860	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066569704	geckodriver	INFO	Listening on 127.0.0.1:65477
+1630066569741	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileEmr1fV"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066570356	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileEmr1fV/search.json.mozlz4", (void 0)))
+1630066572418	Marionette	INFO	Listening on port 65484
+1630066572508	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066573176	geckodriver	INFO	Listening on 127.0.0.1:49170
+1630066573200	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileel6cW3"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066573779	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileel6cW3/search.json.mozlz4", (void 0)))
+1630066575835	Marionette	INFO	Listening on port 49176
+1630066575938	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066597539	Marionette	INFO	Stopped listening on port 65484
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630066597982	Marionette	INFO	Stopped listening on port 65416
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630066598438	Marionette	INFO	Stopped listening on port 49176
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630066599894	geckodriver	INFO	Listening on 127.0.0.1:49275
+1630066599920	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilecVu0lh"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066600475	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilecVu0lh/search.json.mozlz4", (void 0)))
+1630066602291	Marionette	INFO	Listening on port 49280
+1630066602366	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066603203	geckodriver	INFO	Listening on 127.0.0.1:49341
+1630066603223	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilekugZio"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066603915	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilekugZio/search.json.mozlz4", (void 0)))
+1630066606124	Marionette	INFO	Listening on port 49346
+1630066606177	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066606917	geckodriver	INFO	Listening on 127.0.0.1:49411
+1630066607966	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileoi7B50"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066608506	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileoi7B50/search.json.mozlz4", (void 0)))
+1630066610449	Marionette	INFO	Listening on port 49430
+1630066610521	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066765797	Marionette	INFO	Stopped listening on port 49346
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1630066767461	Marionette	INFO	Stopped listening on port 49280
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1630066767841	Marionette	INFO	Stopped listening on port 49430
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1630066769260	geckodriver	INFO	Listening on 127.0.0.1:58774
+1630066769282	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileOZN6By"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066769791	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileOZN6By/search.json.mozlz4", (void 0)))
+1630066771708	Marionette	INFO	Listening on port 58779
+1630066771817	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066772512	geckodriver	INFO	Listening on 127.0.0.1:58836
+1630066773563	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile55xbKo"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066774169	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile55xbKo/search.json.mozlz4", (void 0)))
+1630066776279	Marionette	INFO	Listening on port 58855
+1630066776324	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066777091	geckodriver	INFO	Listening on 127.0.0.1:58913
+1630066777170	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile2TUPji"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066777939	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile2TUPji/search.json.mozlz4", (void 0)))
+1630066780119	Marionette	INFO	Listening on port 58918
+1630066780228	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066821107	Marionette	INFO	Stopped listening on port 58918
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1630066893958	Marionette	INFO	Stopped listening on port 58779
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1630066894441	Marionette	INFO	Stopped listening on port 58855
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1630066905286	geckodriver	INFO	Listening on 127.0.0.1:59073
+1630066905308	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiledEmPyF"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066905795	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiledEmPyF/search.json.mozlz4", (void 0)))
+1630066907597	Marionette	INFO	Listening on port 59078
+1630066907646	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066908449	geckodriver	INFO	Listening on 127.0.0.1:59134
+1630066908481	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileMhJbPb"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066909063	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileMhJbPb/search.json.mozlz4", (void 0)))
+1630066911179	Marionette	INFO	Listening on port 59139
+1630066911228	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066911902	geckodriver	INFO	Listening on 127.0.0.1:59207
+1630066911936	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile6r9gez"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066912511	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile6r9gez/search.json.mozlz4", (void 0)))
+1630066914549	Marionette	INFO	Listening on port 59213
+1630066914585	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066952706	Marionette	INFO	Stopped listening on port 59078
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630066953138	Marionette	INFO	Stopped listening on port 59139
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1630066953566	Marionette	INFO	Stopped listening on port 59213
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630066954731	geckodriver	INFO	Listening on 127.0.0.1:59730
+1630066954753	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilexGRbnq"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066955262	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilexGRbnq/search.json.mozlz4", (void 0)))
+1630066957438	Marionette	INFO	Listening on port 59735
+1630066957497	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066958560	geckodriver	INFO	Listening on 127.0.0.1:59799
+1630066958599	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilegS1DXh"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066959375	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilegS1DXh/search.json.mozlz4", (void 0)))
+1630066961483	Marionette	INFO	Listening on port 59805
+1630066961586	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630066962281	geckodriver	INFO	Listening on 127.0.0.1:59874
+1630066962313	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileRkNtdC"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630066962887	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileRkNtdC/search.json.mozlz4", (void 0)))
+1630066965051	Marionette	INFO	Listening on port 59880
+1630066965160	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630067017476	geckodriver	INFO	Listening on 127.0.0.1:63142
+1630067017505	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile6rezDC"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630067018058	Marionette	INFO	Marionette enabled
+1630067018811	Marionette	INFO	Stopped listening on port 59805
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630067019258	Marionette	INFO	Stopped listening on port 59735
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630067019761	Marionette	INFO	Stopped listening on port 59880
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile6rezDC/search.json.mozlz4", (void 0)))
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630067020774	Marionette	INFO	Listening on port 63147
+1630067020894	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630067021722	geckodriver	INFO	Listening on 127.0.0.1:63213
+1630067021747	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileHnLG2m"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630067022346	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileHnLG2m/search.json.mozlz4", (void 0)))
+1630067024229	Marionette	INFO	Listening on port 63219
+1630067024298	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630067025018	geckodriver	INFO	Listening on 127.0.0.1:63287
+1630067026070	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileAv69EZ"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630067026627	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileAv69EZ/search.json.mozlz4", (void 0)))
+1630067028684	Marionette	INFO	Listening on port 63305
+1630067028747	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: "Async method failed in safeAsyncMethod" (new Error("Connection closed, pending request to server0.conn0.child4/domwalker92, type cancelPick failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:289:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\ncancelPick@resource://devtools/client/fronts/walker.js:499:18\nexports.safeAsyncMethod/<@resource://devtools/shared/async-utils.js:55:25\n_onInspectorFrontDestroyed@resource://devtools/client/inspector/node-picker.js:113:18\nstop@resource://devtools/client/inspector/node-picker.js:176:18\n_destroyToolbox@resource://devtools/client/framework/toolbox.js:3747:24\ndestroy@resource://devtools/client/framework/toolbox.js:3685:10\n_forgetBrowserWindow@resource://devtools/client/framework/devtools-browser.js:702:17\nhandleEvent@resource://devtools/client/framework/devtools-browser.js:723:26\n", "resource://devtools/shared/protocol/Front.js", 103))
+1630067132941	Marionette	INFO	Stopped listening on port 63147
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630067133328	Marionette	INFO	Stopped listening on port 63219
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630067133765	Marionette	INFO	Stopped listening on port 63305
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630067135769	geckodriver	INFO	Listening on 127.0.0.1:53710
+1630067135792	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileykgx1S"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630067136324	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileykgx1S/search.json.mozlz4", (void 0)))
+1630067138340	Marionette	INFO	Listening on port 53715
+1630067138425	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630067139234	geckodriver	INFO	Listening on 127.0.0.1:53778
+1630067139255	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileaKYw5E"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630067139829	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileaKYw5E/search.json.mozlz4", (void 0)))
+1630067141940	Marionette	INFO	Listening on port 53783
+1630067142014	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630067142819	geckodriver	INFO	Listening on 127.0.0.1:53853
+1630067142839	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile7XZv62"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630067143416	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile7XZv62/search.json.mozlz4", (void 0)))
+1630067145489	Marionette	INFO	Listening on port 53859
+1630067145585	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630067162997	Marionette	INFO	Stopped listening on port 53715
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630067164273	Marionette	INFO	Stopped listening on port 53783
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630067164790	Marionette	INFO	Stopped listening on port 53859
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630067169504	geckodriver	INFO	Listening on 127.0.0.1:53949
+1630067169530	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiletlpNLb"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630067170045	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiletlpNLb/search.json.mozlz4", (void 0)))
+1630067171969	Marionette	INFO	Listening on port 53954
+1630067172070	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630067172852	geckodriver	INFO	Listening on 127.0.0.1:54011
+1630067172887	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile7kzMLf"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630067173547	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile7kzMLf/search.json.mozlz4", (void 0)))
+1630067175812	Marionette	INFO	Listening on port 54018
+1630067175880	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630067176731	geckodriver	INFO	Listening on 127.0.0.1:54087
+1630067176761	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileXUiLfH"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630067177442	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileXUiLfH/search.json.mozlz4", (void 0)))
+1630067179915	Marionette	INFO	Listening on port 54093
+1630067180017	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630067212939	Marionette	INFO	Stopped listening on port 53954
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630067213514	Marionette	INFO	Stopped listening on port 54018
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630067214085	Marionette	INFO	Stopped listening on port 54093
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630067240244	geckodriver	INFO	Listening on 127.0.0.1:54217
+1630067240271	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileZQTDMe"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630067240787	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileZQTDMe/search.json.mozlz4", (void 0)))
+1630067242907	Marionette	INFO	Listening on port 54222
+1630067243033	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630067243791	geckodriver	INFO	Listening on 127.0.0.1:54282
+1630067243821	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileN3a7vv"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630067244406	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileN3a7vv/search.json.mozlz4", (void 0)))
+1630067246438	Marionette	INFO	Listening on port 54287
+1630067246556	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630067247296	geckodriver	INFO	Listening on 127.0.0.1:54358
+1630067247337	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilexLK8iD"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630067247903	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilexLK8iD/search.json.mozlz4", (void 0)))
+1630067249970	Marionette	INFO	Listening on port 54364
+1630067250078	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630067277629	Marionette	INFO	Stopped listening on port 54222
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630067278290	Marionette	INFO	Stopped listening on port 54287
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630067279112	Marionette	INFO	Stopped listening on port 54364
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630067309649	geckodriver	INFO	Listening on 127.0.0.1:54504
+1630067309671	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileFz2Xcv"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630067310182	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileFz2Xcv/search.json.mozlz4", (void 0)))
+1630067312229	Marionette	INFO	Listening on port 54509
+1630067312322	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630067313029	geckodriver	INFO	Listening on 127.0.0.1:54565
+1630067314074	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiles9E7SG"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630067314607	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiles9E7SG/search.json.mozlz4", (void 0)))
+1630067316506	Marionette	INFO	Listening on port 54584
+1630067316622	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1630067317399	geckodriver	INFO	Listening on 127.0.0.1:54641
+1630067318420	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilejC65ui"
+[GFX1-]: No GPUs detected via PCI
+[GFX1-]: glxtest: process failed (received signal 11)
+1630067318929	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilejC65ui/search.json.mozlz4", (void 0)))
+1630067320982	Marionette	INFO	Listening on port 54659
+1630067321057	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1630068117631	Marionette	INFO	Stopped listening on port 54509
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630068118541	Marionette	INFO	Stopped listening on port 54584
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1630068121259	Marionette	INFO	Stopped listening on port 54659
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
