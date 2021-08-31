@@ -22,6 +22,7 @@ jobs:
       - uses: extractions/setup-just@v1
         with:
           just-version: latest
+      - uses: conda-incubator/setup-miniconda@v2.1.1 
         with:
           environment-file: fiesta-back/environment.yml
           activate-environment: fiesta
