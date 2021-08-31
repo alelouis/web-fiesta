@@ -54,7 +54,7 @@ jobs:
           ng build --prod
 
       - name: Build and push Docker image
-        run: docker build . --tag alelouis/web-fiesta:latest --push
+        run: docker build . --tag alelouis/web-fiesta:${GITHUB_REF##*/} --push
 
 
 
