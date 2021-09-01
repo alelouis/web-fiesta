@@ -1,7 +1,8 @@
 export const environment = {
   production: false,
   backend: 'http://localhost:5000/api',
-  websocket: 'http://localhost:5000'
+  websocket: 'http://localhost:5000',
+  image: 'no-image'
 };
 
 /*

@@ -1,5 +1,8 @@
 name: CI
 
+env:
+  tag: 'latest'
+
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
@@ -48,13 +51,14 @@ jobs:
 
       - name: Build angular
         run: |
-          cd fiesta-front 
+          cd fiesta-front
+          sed -i '' 's/to_be_replaced/${{ env.tag }}/g' src/environments/environment.prod.ts
           npm install -g @angular/cli
           npm install --save-dev @angular-devkit/build-angular
           ng build --prod
 
       - name: Build and push Docker image
-        run: docker build . --tag alelouis/web-fiesta:latest --push
+        run: docker build . --tag alelouis/web-fiesta:${{ env.tag }} --push
 
 
 
