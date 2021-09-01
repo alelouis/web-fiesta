@@ -67,7 +67,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.OVH_HOST }}
-          username: ${{ secrets.OVH_USERNAME }}
+          username: ${{ secrets.OVH_USER }}
           key: ${{ secrets.OVH_KEY }}
           port: 22
           script: |
