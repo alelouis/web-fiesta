@@ -60,5 +60,20 @@ jobs:
       - name: Build and push Docker image
         run: docker build . --tag alelouis/web-fiesta:${{ env.tag }} --push
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: OVH Server deploy
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.OVH_HOST }}
+        username: ${{ secrets.OVH_USERNAME }}
+        key: ${{ secrets.OVH_KEY }}
+        port: 22
+        script: |
+          cd /home/alelouis/Projects/nginx-certbot
+          sh update-ws.sh
+
 
 
