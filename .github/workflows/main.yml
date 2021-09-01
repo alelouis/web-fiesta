@@ -52,7 +52,7 @@ jobs:
       - name: Build angular
         run: |
           cd fiesta-front
-          sed -i '' 's/to_be_replaced/${{ env.tag }}/g' src/environments/environment.prod.ts
+          sed -i 's/to_be_replaced/${{ env.tag }}/g' src/environments/environment.prod.ts
           npm install -g @angular/cli
           npm install --save-dev @angular-devkit/build-angular
           ng build --prod
