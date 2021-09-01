@@ -64,7 +64,6 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: OVH Server deploy
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.OVH_HOST }}
