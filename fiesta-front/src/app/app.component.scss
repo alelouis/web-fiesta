@@ -12,3 +12,21 @@
     max-width: 900px;
     margin: 0 auto;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.footer-link {
+    margin-right: 1em;
+    color:rgb(167, 167, 167);
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}

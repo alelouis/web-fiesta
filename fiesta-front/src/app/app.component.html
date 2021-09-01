@@ -5,3 +5,18 @@
 <div class="main-container">
     <router-outlet></router-outlet>
 </div>
+
+<div class="footer">
+    <span class="footer-link">
+        <fa-icon [icon]="['fab', 'github']"></fa-icon>
+        <a target="_blank" href="https://github.com/alelouis/web-fiesta">
+            <span> alelouis/webfiesta</span>
+        </a>
+    </span>
+    <span class="footer-link">
+        <fa-icon [icon]="['fab', 'docker']"></fa-icon>
+        <a target="_blank" href="https://hub.docker.com/repository/docker/alelouis/web-fiesta">
+            <span> webfiesta/{{image_version}}</span>
+        </a>
+    </span>
+</div>

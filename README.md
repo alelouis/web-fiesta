@@ -1,3 +1,4 @@
+[![CI](https://github.com/alelouis/web-fiesta/actions/workflows/main.yml/badge.svg)](https://github.com/alelouis/web-fiesta/actions/workflows/main.yml)
 # Web-Fiesta
 
 Fiesta De Los Muertos, on the web !
