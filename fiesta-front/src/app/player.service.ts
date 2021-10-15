@@ -9,55 +9,64 @@ import { environment } from 'src/environments/environment';
 })
 export class PlayerService {
 
-  constructor(private http: HttpClient,
+  constructor(
+    private http: HttpClient,
     private socket: Socket) { }
 
-    getWord(): Observable<any> {
-      return this.http.post(environment.backend + '/get_word', 
-        {sid: this.socket.ioSocket.id}
-      );
-    }
+  private room_id = "ejka";
 
-    sendWord(word: string): Observable<any> {
-      return this.http.post(environment.backend + '/send_word', 
-        {word: word, sid: this.socket.ioSocket.id}
-      );
-    }
+  createRoom(): Observable<any> {
+    return this.http.post(environment.backend + '/create_room' , 
+      {room_id: this.room_id}
+    );
+  }
 
-    sendAnswers(answers): Observable<any> {
-      return this.http.post(environment.backend + '/send_answers', 
-        {answers: answers, sid: this.socket.ioSocket.id}
-      );
-    }
+  getWord(): Observable<any> {
+    return this.http.post(environment.backend + '/' + this.room_id + '/get_word' , 
+      {sid: this.socket.ioSocket.id}
+    );
+  }
+
+  sendWord(word: string): Observable<any> {
+    return this.http.post(environment.backend + '/' + this.room_id + '/send_word', 
+      {word: word, sid: this.socket.ioSocket.id}
+    );
+  }
+
+  sendAnswers(answers): Observable<any> {
+    return this.http.post(environment.backend + '/' + this.room_id + '/send_answers', 
+      {answers: answers, sid: this.socket.ioSocket.id}
+    );
+  }
 
   createPlayer(nickname): Observable<any> {
-    return this.http.post(environment.backend + '/create_player', 
+    return this.http.post(environment.backend + '/' + this.room_id + '/create_player', 
       {nickname: nickname, sid: this.socket.ioSocket.id}
     );
   }
 
   setReady(ready: boolean): Observable<any> {
-    return this.http.put(environment.backend + '/set_ready', 
+    return this.http.put(environment.backend + '/' + this.room_id + '/set_ready', 
       {ready: ready, sid: this.socket.ioSocket.id}
     );
   }
 
   getNotebook(lastWord: string): Observable<any> {
-    return this.http.post(environment.backend + '/get_notebook', 
+    return this.http.post(environment.backend + '/' + this.room_id + '/get_notebook', 
       {last_word: lastWord}
     );
   }
 
   getAllCharacters(): Observable<any> {
-    return this.http.get(environment.backend + '/get_all_characters');
+    return this.http.get(environment.backend + '/' + this.room_id + '/get_all_characters');
   }
 
   getAllLastWords(): Observable<any> {
-    return this.http.get(environment.backend + '/get_all_last_words');
+    return this.http.get(environment.backend + '/' + this.room_id + '/get_all_last_words');
   }
 
   clearGame(): Observable<any> {
-    return this.http.get(environment.backend + '/clear_game');
+    return this.http.get(environment.backend + '/' + this.room_id + '/clear_game');
   }
 
   getPlayers(): Observable<any> {

@@ -47,6 +47,13 @@ export class WaitingRoomComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    this.playerService.createRoom().subscribe((response) => {
+      console.log(response);
+    }, (error) => {
+      console.error(error);
+    });
+
     this.playerService.getPlayers().subscribe((playerMap) => {
       this.playerMap = playerMap;
       this.players = Object.keys(playerMap).map((key) => {
