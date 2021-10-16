@@ -22,6 +22,7 @@ build-prod-front:
 
 run-back:
 	#!/bin/zsh
+	ls
 	cd fiesta-back && gunicorn -b 0.0.0.0:5000 -k eventlet api:app -D
 
 kill-back:
@@ -33,4 +34,5 @@ restart-back: kill-back && run-back
 test-back: run-back && kill-back
 	#!/bin/zsh
 	sleep 2
+	ls
 	cd fiesta-back && pytest -s
