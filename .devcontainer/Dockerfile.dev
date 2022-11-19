@@ -1,0 +1,25 @@
+FROM python:3.9
+
+WORKDIR /setup
+
+# Utility
+RUN apt-get update
+RUN mkdir -p /opt/just
+RUN curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /opt/just
+ENV PATH="/opt/just:$PATH"
+RUN apt-get install -y zsh
+
+# Back
+ENV VIRTUAL_ENV=/opt/venv
+RUN python3 -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+COPY fiesta-back/requirements.txt .
+RUN pip install -r requirements.txt
+
+# Front
+COPY fiesta-front/package.json .
+RUN apt-get -y install curl gnupg
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - 
+RUN apt-get install -y nodejs
+RUN npm install
+RUN npm install -g @angular/cli@10.2.0

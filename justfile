@@ -7,7 +7,7 @@ terminate: kill-front kill-back
 ### Frontend ###
 
 run-front:
-	cd ./fiesta-front && ng serve &
+	cd ./fiesta-front && ng serve
 
 kill-front:
 	kill -9 $(pgrep "ng serve")
@@ -22,7 +22,7 @@ build-prod-front:
 
 run-back:
 	#!/bin/zsh
-	cd ./fiesta-back && gunicorn -b 0.0.0.0:5000 -k eventlet api:app -D
+	cd ./fiesta-back && gunicorn -b 0.0.0.0:5000 -k eventlet api:app
 
 kill-back:
 	pkill -9 gunicorn
