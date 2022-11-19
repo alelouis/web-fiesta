@@ -1,5 +1,11 @@
 {
 	"name": "Dev dockerfile",
 	"context": "..",
-	"dockerFile": "Dockerfile.dev"
+	"dockerFile": "Dockerfile.dev",
+	"extensions": [
+		"ms-python.python",
+		"usernamehw.errorlens",
+		"christian-kohler.npm-intellisense",
+		"github.vscode-pull-request-github"
+	]
 }
