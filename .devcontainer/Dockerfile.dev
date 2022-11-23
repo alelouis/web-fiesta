@@ -22,4 +22,4 @@ RUN apt-get -y install curl gnupg
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash - 
 RUN apt-get install -y nodejs
 # RUN npm install
-RUN npm install -g @angular/cli@10.2.0
+RUN npm install -g @angular/cli@15.0.1
