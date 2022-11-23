@@ -1,4 +1,4 @@
-@use '~@angular/material' as mat;
+@use '@angular/material' as mat;
 
 .color1 {
     $mycolor: mat.get-color-from-palette(mat.$teal-palette, 800);
