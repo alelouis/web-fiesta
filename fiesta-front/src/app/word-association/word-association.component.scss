@@ -1,36 +1,36 @@
-@import '~@angular/material/theming';
+@use '~@angular/material' as mat;
 
 .color1 {
-    $mycolor: mat-color($mat-teal, 800);
-    > div { background-color: mat-color($mat-teal, 50); border-color: mat-color($mat-teal, 800); }
+    $mycolor: mat.get-color-from-palette(mat.$teal-palette, 800);
+    > div { background-color: mat.get-color-from-palette(mat.$teal-palette, 50); border-color: mat.get-color-from-palette(mat.$teal-palette, 800); }
 }
 .color2 {
-    $mycolor: mat-color($mat-red, 800);
-    > div { background-color: mat-color($mat-red, 50); border-color: mat-color($mat-red, 800); }
+    $mycolor: mat.get-color-from-palette(mat.$red-palette, 800);
+    > div { background-color: mat.get-color-from-palette(mat.$red-palette, 50); border-color: mat.get-color-from-palette(mat.$red-palette, 800); }
 }
 .color3 {
-    $mycolor: mat-color($mat-yellow, 800);
-    > div { background-color: mat-color($mat-yellow, 50); border-color: mat-color($mat-yellow, 800); }
+    $mycolor: mat.get-color-from-palette(mat.$yellow-palette, 800);
+    > div { background-color: mat.get-color-from-palette(mat.$yellow-palette, 50); border-color: mat.get-color-from-palette(mat.$yellow-palette, 800); }
 }
 .color4 {
-    $mycolor: mat-color($mat-light-green, 800);
-    > div { background-color: mat-color($mat-light-green, 50); border-color: mat-color($mat-light-green, 800); }
+    $mycolor: mat.get-color-from-palette(mat.$light-green-palette, 800);
+    > div { background-color: mat.get-color-from-palette(mat.$light-green-palette, 50); border-color: mat.get-color-from-palette(mat.$light-green-palette, 800); }
 }
 .color5 {
-    $mycolor: mat-color($mat-blue, 800);
-    > div { background-color: mat-color($mat-blue, 50); border-color: mat-color($mat-blue, 800); }
+    $mycolor: mat.get-color-from-palette(mat.$blue-palette, 800);
+    > div { background-color: mat.get-color-from-palette(mat.$blue-palette, 50); border-color: mat.get-color-from-palette(mat.$blue-palette, 800); }
 }
 .color6 {
-    $mycolor: mat-color($mat-brown, 800);
-    > div { background-color: mat-color($mat-brown, 50); border-color: mat-color($mat-brown, 800); }
+    $mycolor: mat.get-color-from-palette(mat.$brown-palette, 800);
+    > div { background-color: mat.get-color-from-palette(mat.$brown-palette, 50); border-color: mat.get-color-from-palette(mat.$brown-palette, 800); }
 }
 .color7 {
-    $mycolor: mat-color($mat-orange, 800);
-    > div { background-color: mat-color($mat-orange, 50); border-color: mat-color($mat-orange, 800); }
+    $mycolor: mat.get-color-from-palette(mat.$orange-palette, 800);
+    > div { background-color: mat.get-color-from-palette(mat.$orange-palette, 50); border-color: mat.get-color-from-palette(mat.$orange-palette, 800); }
 }
 .color8 {
-    $mycolor: mat-color($mat-purple, 800);
-    > div { background-color: mat-color($mat-purple, 50); border-color: mat-color($mat-purple, 800); }
+    $mycolor: mat.get-color-from-palette(mat.$purple-palette, 800);
+    > div { background-color: mat.get-color-from-palette(mat.$purple-palette, 50); border-color: mat.get-color-from-palette(mat.$purple-palette, 800); }
 }
 
 .mini-skull {
@@ -79,7 +79,7 @@ $margin: 6px;
     display: inline-block;
     padding: 8px;
     border-radius: 8px;
-    @include mat-elevation(2);
+    @include mat.elevation(2);
     background: white;
     margin: $margin;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -98,7 +98,7 @@ $margin: 6px;
         // animation-name: selection;
         // animation-duration: 0.3s;
         transform: perspective(200px) rotateY(0) scale(1.1);
-        @include mat-elevation(2);
+        @include mat.elevation(2);
     }
 
     &.chosen {

@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@use '~@angular/material' as mat;
 @import './css-reset.scss';
 @import './theme.scss';
 
@@ -28,7 +29,7 @@ strong {
 }
 
 body {
-    background: mat-color($mat-grey, 100);
+    background: mat.get-color-from-palette(mat.$grey-palette, 100);
 }
 
 .p {
