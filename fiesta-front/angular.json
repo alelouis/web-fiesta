@@ -64,20 +64,24 @@
                   "maximumError": "10kb"
                 }
               ]
-            }
+            },
+            "development": {}
           },
-          "defaultConfiguration": ""
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "fiesta-front:build"
           },
           "configurations": {
             "production": {
               "browserTarget": "fiesta-front:build:production"
+            },
+            "development": {
+              "browserTarget": "fiesta-front:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -119,14 +123,17 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "fiesta-front:serve"
+            "protractorConfig": "e2e/protractor.conf.js"
           },
           "configurations": {
             "production": {
               "devServerTarget": "fiesta-front:serve:production"
+            },
+            "development": {
+              "devServerTarget": "fiesta-front:serve:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         }
       }
     }
