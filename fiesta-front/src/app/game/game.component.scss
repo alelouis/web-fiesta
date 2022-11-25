@@ -1,5 +1,5 @@
+@use '@angular/material' as mat;
 
-@import '~@angular/material/theming';
 
 * { 
     font-size: 1.3rem;
@@ -17,7 +17,7 @@
     display: inline-block;
     padding: 8px;
     border-radius: 8px;
-    @include mat-elevation(2);
+    @include mat.elevation(2);
     margin-bottom: 12px;
     transition: transform $duration;
     transition-timing-function: linear;
@@ -28,7 +28,7 @@
         color: transparent;
         transition: all 0;
         transition-delay: $duration/2;
-        border: 1.5px solid mat-color($mat-blue, 800);
+        border: 1.5px solid mat.get-color-from-palette(mat.$blue-palette, 800);
         border-radius: 2px;
         padding: 16px 24px;
         
@@ -36,7 +36,7 @@
         font-family: 'Patrick Hand', cursive;
         font-size: 1.4em;
 
-        background: mat-color($mat-blue, 200);
+        background: mat.get-color-from-palette(mat.$blue-palette, 200);
 
         cursor: pointer;
     }
@@ -45,7 +45,7 @@
         cursor: default;
         transform: perspective(300px) rotateY(0deg);
         > div {
-            color: mat-color($mat-blue, 800);
+            color: mat.get-color-from-palette(mat.$blue-palette, 800);
             background: white;
         }
     }
@@ -76,7 +76,7 @@
         overflow: hidden;
         max-width: 100%;
         display: block;
-        @include mat-elevation(4);
+        @include mat.elevation(4);
         z-index: 10;
         position: relative;
         background-image: url(/assets/skull.png);
@@ -85,7 +85,7 @@
     }
 
     .jaw {
-        @include mat-elevation(4);
+        @include mat.elevation(4);
         border: 6px solid black;
         border-radius: 0 0 $radius $radius;
         overflow: hidden;
